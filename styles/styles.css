@@ -35,7 +35,7 @@ select {
 		margin: 0 1rem;
 }
 
-button {
+button, a.button {
 		background: #DDDDDD;
 		transition: background .2s ease;
 		border-radius: 2px;
@@ -162,7 +162,7 @@ table.word td:nth-child(even) {
 }
 
 input[type=number]{
-		width: 60px;
+		width: 80px;
 		text-align: center;
 		border-radius:10px;
 		font-size: 32px;
@@ -206,4 +206,9 @@ div.scoreboard {
 
 .seed-container input{
 		vertical-align: middle;
+}
+
+/*Hidden Link til DONE*/
+#interference{
+	display:none
 }

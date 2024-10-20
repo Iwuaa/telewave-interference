@@ -8,6 +8,16 @@ var recW = (binW/1000)*cw;
 var recW2 = 3*binW;
 var recW3 = 5*binW;
 
+/* old colors
+var green= "#a4cea3";
+var orange= "#d3961f";
+var red= "#dd5d3e";
+*/
+
+var style = getComputedStyle(document.body);
+var greenA = style.getPropertyValue('--green');
+var redA = style.getPropertyValue('--red');
+var orangeA = style.getPropertyValue('--orange');
 
 function position(x){
 		return 5 + (x/1005)*cw;
@@ -16,17 +26,18 @@ function position(x){
 function draw(x){
 		posx = position(x)
 		ctx.beginPath();
-		ctx.fillStyle = "#d3961f";
+		//ctx.fillStyle = "#d3961f";
+		ctx.fillStyle = orangeA;
 		ctx.fillRect(posx-recW3/2, 0, recW3, 150);
 		ctx.stroke();
 
 		ctx.beginPath();
-		ctx.fillStyle = "#a4cea3";
+		ctx.fillStyle = greenA;
 		ctx.fillRect(posx-recW2/2, 0, recW2, 150);
 		ctx.stroke();
 
 		ctx.beginPath();
-		ctx.fillStyle = "#dd5d3e";
+		ctx.fillStyle = redA;
 		ctx.fillRect(posx-recW/2, 0, recW, 150);
 		ctx.stroke();
 

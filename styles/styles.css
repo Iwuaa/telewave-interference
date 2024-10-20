@@ -1,3 +1,9 @@
+:root {
+	--green: #bbf2ba;
+	--orange: #f3c260;
+	--red: #fc5b58;
+  }
+
 * {
 		box-sizing:border-box;
 }

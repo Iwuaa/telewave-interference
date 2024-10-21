@@ -19,3 +19,14 @@
 # Telewave Interference
 
 Telewave on steroids - guess on two axes at the same time!
+
+# Sounds Fishy
+1. To start you’ll need a minimum of four people.
+2. Choose a player to be the Guesser. Their mission is to identify the fake answers from the real one.
+3. Ask the Guesser to close their eyes. Secretly choose a new player to be the True Blue Kipper. (Make sure the
+Guesser doesn’t know who.) Their mission is to say the answer on the card.
+4. Everyone else: you’re the Red Herrings. Each of you must make up a fake answer to the question.
+5. Before you tell the Guesser they can open their eyes, make sure the other players have seen the question, and the question card is hidden from the Guesser.
+6. Ok, now a player reads out the question and each player says their answer.
+7. The Guesser now has to decide which answers were fake. If they correctly guess a fake answer, they win a point. They can stop and bank their points whenever they like, but if they hook the real answer before the end of the round, they lose them  all.
+8. The player with the most points after you run out of cards is the winner.

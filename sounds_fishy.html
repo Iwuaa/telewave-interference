@@ -1,0 +1,202 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Sounds Fishy</title>
+		<meta name="description" content="Telewave">
+		<meta name="author" content="Gus">
+		<link rel="stylesheet" href="styles/styles.css?v=1.0">
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162367629-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-162367629-2');
+		</script>
+
+		<script>
+			if (sessionStorage.getItem("player1Name") === null){
+				sessionStorage.setItem("player1Name", "Player 1");
+			}
+			if (sessionStorage.getItem("player2Name") === null){
+				sessionStorage.setItem("player2Name", "Player 2");
+			}
+			if (sessionStorage.getItem("player3Name") === null){
+				sessionStorage.setItem("player3Name", "Player 3");
+			}
+			if (sessionStorage.getItem("player4Name") === null){
+				sessionStorage.setItem("player4Name", "Player 4");
+			}
+		</script>
+		
+
+	</head>
+
+	<body>
+
+		<div>
+			<h1>Sounds Fishy</h1>
+			<div id='header'> 
+				<!-- <div class="seed-container">
+					<span class="label">Seed</span>
+					<input type="image" onclick="update_seed()" src="img/refresh.png" alt="Update seed" width=24px height=24px>
+					<input type="text" id="seed" placeholder="seed" size="8" autofocus>
+					<input type="image" onclick="copySeedUrl()" src="img/clipboard-copy-512.png" alt="Copy link with seed" width=24px height=24px>
+				</div> -->
+				<div>
+					<button id="new" onclick="newFishClue()">❓ New clue</button>
+					<!-- <button id="commit" onclick="button_guess()">🎯 Guess</button> -->
+					<button id="reveal" onclick="peekFishyAnswer()">👀 Peek</button>
+					<button id="reset" onclick="clearFishyAnswer()">🧹 Clear</button>
+				</div>
+				<!-- <div class="percentages-container">
+						<span id="percentagesText" class="label">Percentage</span>
+						<input type="checkbox" id="percentages" checked onclick="update_percentages()">
+				</div> -->
+				<div>
+					<a href="instructions#sounds-fishy">Instructions</a>
+					<a href="lang/langs"><img src="lang/icons/translation.png" alt="Other languages" width=36px height=36px></a>
+				</div>
+			</div>
+		</div>
+		<script src="scripts/jquery-3.4.1.min.js"></script>
+		<script src="scripts/seedrandom.js"></script>
+		<script src="scripts/fishdata.js"></script>
+
+		<!-- <canvas id="wave" width="1000" height="150" style="border:5px solid #d3d3d3;">
+		</canvas>
+		<div class="slidecontainer">
+			<input type="range" min="0" max="1000" value="500" class="slider" id="guesser" oninput="guessdisp.value = Math.round(guesser.value/10)">
+			<output id="guessdisp">50</output>
+		</div> -->
+
+		<div id="fishyboard">
+			<div>
+				<h2 id="fishQuestion"></h2>
+			</div>
+			<div id="fishPeek">
+				<h2 id="fishAnswer"></h2>
+				<b id="fishPlayer1" style="font-weight: bold;"></b>				
+				<span id="fishPlayer2"></span>
+
+			</div>
+
+
+		</div>
+		<div id="board"></div>
+		<div id="score"></div>
+		<div id="scoreboard">
+			<div class="divTable scoreboard fish">
+				<div class="divTableBody">
+					<div class="divTableRow">
+						<div class="divTableCell playerCell">
+							<p id="player1Name" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+									-
+								</button>
+
+								<input type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell">
+							<p id="player2Name" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+									-
+								</button>
+
+								<input type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell">
+							<p id="player3Name" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+									-
+								</button>
+
+								<input type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell">
+							<p id="player4Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+									-
+								</button>
+
+								<input type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+									+
+								</button>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			document.getElementById("player1Name").addEventListener("input", function(el) {
+				sessionStorage.setItem("player1Name", document.getElementById('player1Name').innerHTML);
+			});
+			document.getElementById("player2Name").addEventListener("input", function(el) {
+				sessionStorage.setItem("player2Name", document.getElementById('player2Name').innerHTML);
+			});
+			document.getElementById("player3Name").addEventListener("input", function(el) {
+				sessionStorage.setItem("player3Name", document.getElementById('player3Name').innerHTML);
+			});
+			document.getElementById("player4Name").addEventListener("input", function(el) {
+				sessionStorage.setItem("player4Name", document.getElementById('player4Name').innerHTML);
+			});
+			
+			window.onload = function() {
+				document.getElementById('player1Name').innerHTML = sessionStorage.getItem("player1Name");
+				document.getElementById('player2Name').innerHTML = sessionStorage.getItem("player2Name");	
+				document.getElementById('player3Name').innerHTML = sessionStorage.getItem("player3Name");	
+				document.getElementById('player4Name').innerHTML = sessionStorage.getItem("player4Name");	
+				newFishClue();					
+			}
+		</script>
+
+		<div class="games">
+			<div style="margin-top:20px" id="interference">
+			<a href="index.html" class="button" style="font-weight:bold">🌊 Telewave 🌊</a>
+			</div>
+			<!-- <div style="margin-top:20px" id="interference">
+				<a href="interference.html" class="button" style="font-weight:bold">🧠 Telewave Interference 🧠</a>
+			</div> -->
+		</div>
+
+		<script src="scripts/fishyscripts.js"></script>
+		</div>
+
+	</body>
+</html>

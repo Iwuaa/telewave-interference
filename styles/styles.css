@@ -151,7 +151,7 @@ table.word td:nth-child(even) {
 		width: 100%;
 		height: 100px;
 		text-align: center;
-		padding: 40px 0;
+		padding: 20px 0;
 		/* height: 250px; */
 		/* display: flex; */
 		/* border: 1px #DDDDDD solid; */
@@ -191,10 +191,19 @@ div.scoreboard {
 		font-size: 20px;
 		font-weight: bold;
 }
-.divTable.scoreboard .divTableCell:nth-child(even) {
+.divTable.scoreboard .divTableCell:nth-child(4n+2) {
 		background: #D0E4F5;
 }
-
+.divTable.scoreboard .divTableCell:nth-child(4n+3) {
+		background: #f5e9d0;
+}
+.divTable.scoreboard .divTableCell:nth-child(4n+4) {
+		background: #d9f5d0;
+}
+div.scoreboard.fish {
+	width: 100%;
+	vertical-align: middle;
+}
 /* DivTable.com */
 .divTable{ display: table; }
 .divTableRow { display: table-row; }
@@ -208,7 +217,36 @@ div.scoreboard {
 		vertical-align: middle;
 }
 
-/*Hidden Link til DONE*/
+/*Hidden Link till DONE*/
 #interference{
-	display:none
+	/*display:none*/
+}
+
+.games{
+    width: 100%;
+	margin-top: 100px;
+	margin-bottom: 50px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#fishyboard{
+	border: 2px solid #000000;
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#fishPeek{
+	/* border-top: 1px solid #9f9d9d; */
+	/* color: rgb(36, 94, 231); */
+	padding: 5px;
+	width: 100%;
+	/* visibility: hidden; */
+	background-color: #b1d6f8;
 }

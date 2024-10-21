@@ -47,3 +47,14 @@ function randomPlayers(range){
 function clearFishyAnswer(){
     document.getElementById("fishPeek").style.visibility = "hidden";
 }
+
+function resetScore(){
+    var scores = document.getElementsByClassName("scoreInput");
+    if (window.confirm("Are you sure you want to reset scoreboard?")) {
+        for (let i = 0; i < scores.length; i++) {
+            scores[i].value = 0;
+        }
+    }
+
+    
+}

@@ -20,17 +20,17 @@
 		</script>
 
 		<script>
-			if (sessionStorage.getItem("player1Name") === null){
-				sessionStorage.setItem("player1Name", "Player 1");
+			if (localStorage.getItem("player1Name") === null){
+				localStorage.setItem("player1Name", "Player 1");
 			}
-			if (sessionStorage.getItem("player2Name") === null){
-				sessionStorage.setItem("player2Name", "Player 2");
+			if (localStorage.getItem("player2Name") === null){
+				localStorage.setItem("player2Name", "Player 2");
 			}
-			if (sessionStorage.getItem("player3Name") === null){
-				sessionStorage.setItem("player3Name", "Player 3");
+			if (localStorage.getItem("player3Name") === null){
+				localStorage.setItem("player3Name", "Player 3");
 			}
-			if (sessionStorage.getItem("player4Name") === null){
-				sessionStorage.setItem("player4Name", "Player 4");
+			if (localStorage.getItem("player4Name") === null){
+				localStorage.setItem("player4Name", "Player 4");
 			}
 		</script>
 		
@@ -165,23 +165,23 @@
 
 		<script>
 			document.getElementById("player1Name").addEventListener("input", function(el) {
-				sessionStorage.setItem("player1Name", document.getElementById('player1Name').innerHTML);
+				localStorage.setItem("player1Name", document.getElementById('player1Name').innerHTML);
 			});
 			document.getElementById("player2Name").addEventListener("input", function(el) {
-				sessionStorage.setItem("player2Name", document.getElementById('player2Name').innerHTML);
+				localStorage.setItem("player2Name", document.getElementById('player2Name').innerHTML);
 			});
 			document.getElementById("player3Name").addEventListener("input", function(el) {
-				sessionStorage.setItem("player3Name", document.getElementById('player3Name').innerHTML);
+				localStorage.setItem("player3Name", document.getElementById('player3Name').innerHTML);
 			});
 			document.getElementById("player4Name").addEventListener("input", function(el) {
-				sessionStorage.setItem("player4Name", document.getElementById('player4Name').innerHTML);
+				localStorage.setItem("player4Name", document.getElementById('player4Name').innerHTML);
 			});
 			
 			window.onload = function() {
-				document.getElementById('player1Name').innerHTML = sessionStorage.getItem("player1Name");
-				document.getElementById('player2Name').innerHTML = sessionStorage.getItem("player2Name");	
-				document.getElementById('player3Name').innerHTML = sessionStorage.getItem("player3Name");	
-				document.getElementById('player4Name').innerHTML = sessionStorage.getItem("player4Name");	
+				document.getElementById('player1Name').innerHTML = localStorage.getItem("player1Name");
+				document.getElementById('player2Name').innerHTML = localStorage.getItem("player2Name");	
+				document.getElementById('player3Name').innerHTML = localStorage.getItem("player3Name");	
+				document.getElementById('player4Name').innerHTML = localStorage.getItem("player4Name");	
 				newFishClue();					
 			}
 		</script>

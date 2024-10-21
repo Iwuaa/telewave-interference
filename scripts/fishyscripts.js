@@ -22,12 +22,12 @@ function newFishClue(){
     console.log(randPlayerNumber + players.length)
     
     // var chosenPlayer = players[randPlayerNumber].getElementsByTagName('p').value;
-    console.log(randPlayerNumber + "   " + sessionStorage.getItem("player"+randPlayerNumber[0]+"Name"));
-    // console.log(secondPlayer + "   " + sessionStorage.getItem("player"+secondPlayer+"Name"));
+    console.log(randPlayerNumber + "   " + localStorage.getItem("player"+randPlayerNumber[0]+"Name"));
+    // console.log(secondPlayer + "   " + localStorage.getItem("player"+secondPlayer+"Name"));
     // document.getElementById("fishPlayer").p.innerHTML = clue.answer;
   
-    document.getElementById("fishPlayer1").innerHTML = sessionStorage.getItem("player"+randPlayerNumber[0]+"Name");
-    document.getElementById("fishPlayer2").innerHTML = "or " + sessionStorage.getItem("player"+randPlayerNumber[1]+"Name");
+    document.getElementById("fishPlayer1").innerHTML = localStorage.getItem("player"+randPlayerNumber[0]+"Name");
+    document.getElementById("fishPlayer2").innerHTML = "or " + localStorage.getItem("player"+randPlayerNumber[1]+"Name");
 
 }
 

@@ -213,7 +213,7 @@ const fishdata = [
         },
         {
             "answer": "Land a flying saucer",
-            "question": "In ChĂ˘teauneuf-du-Pape, France, it is illegal to do what in vineyards?"
+            "question": "In Châteauneuf-du-Pape, France, it is illegal to do what in vineyards?"
         },
         {
             "answer": "Cow poo",

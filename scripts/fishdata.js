@@ -798,5 +798,261 @@ const fishdata = [
         {
             "answer": "Skydive",
             "question": "On Sunday in Florida it is illegal for a single woman to do what?"
-        }
+        },
+		{
+		  "question": "AI: What unique animal did ancient Egyptians use to guard their homes?",
+		  "answer": "Baboon"
+		},
+		{
+		  "question": "AI: What object was once used as currency in the Solomon Islands?",
+		  "answer": "Dolphin teeth"
+		},
+		{
+		  "question": "AI: What odd creature did the Roman emperor Elagabalus try to feed to his dinner guests as a prank?",
+		  "answer": "Live ostrich"
+		},
+		{
+		  "question": "AI: What unique material was used by ancient Romans to whiten their teeth?",
+		  "answer": "Urine"
+		},
+		{
+		  "question": "AI: What strange animal did the British royal family use in ceremonies in the 16th century?",
+		  "answer": "Beavers"
+		},
+		{
+		  "question": "AI: What rare and expensive spice was once used as a form of rent in medieval Europe?",
+		  "answer": "Pepper"
+		},
+		{
+		  "question": "AI: What unusual ingredient did ancient Greek athletes eat to improve their performance?",
+		  "answer": "Honey"
+		},
+		{
+		  "question": "AI: What bizarre method was used in the Victorian era to preserve the dead for viewing?",
+		  "answer": "Glass coffin"
+		},
+		{
+		  "question": "AI: What was once considered a medical treatment and fashion statement in ancient China?",
+		  "answer": "Foot binding"
+		},
+		{
+		  "question": "AI: What strange form of entertainment did the Aztecs enjoy using with rubber balls?",
+		  "answer": "Human sacrifices"
+		},
+		{
+		  "question": "AI: What rare gemstone did Cleopatra dissolve in vinegar to drink as a show of wealth?",
+		  "answer": "Pearl"
+		},
+		{
+		  "question": "AI: What unusual food item did astronaut John Young smuggle onto a NASA space mission in 1965?",
+		  "answer": "Corned beef sandwich"
+		},
+		{
+		  "question": "AI: What item of furniture did the French Revolutionaries use for executions?",
+		  "answer": "Guillotine"
+		},
+		{
+		  "question": "AI: What animal was legally prosecuted in medieval Europe for property damage?",
+		  "answer": "Pig"
+		},
+		{
+		  "question": "AI: What strange invention did the ancient Greeks use to measure distances?",
+		  "answer": "Odometer"
+		},
+		{
+		  "question": "AI: What dangerous element was used in hats during the 18th and 19th centuries, giving rise to the phrase 'mad as a hatter'?",
+		  "answer": "Mercury"
+		},
+		{
+		  "question": "AI: What unusual method did the ancient Persians use to decide important matters?",
+		  "answer": "Drunken deliberation"
+		},
+		{
+		  "question": "AI: What animal was used to detect poison in ancient Rome?",
+		  "answer": "Dog"
+		},
+		{
+		  "question": "AI: What food did British sailors receive to prevent scurvy in the 18th century, giving them the nickname 'Limeys'?",
+		  "answer": "Limes"
+		},
+		{
+		  "question": "AI: What bird did the US Army try to use to deliver explosives in World War II?",
+		  "answer": "Pigeon"
+		},
+		{
+		  "question": "AI: What bizarre method was once used to cure the plague in medieval times?",
+		  "answer": "Live frogs"
+		},
+		{
+		  "question": "AI: What rare animal did Napoleon Bonaparte use to prank his officers by releasing them in large numbers?",
+		  "answer": "Rabbits"
+		},
+		{
+		  "question": "AI: What bizarre punishment was given to bakers who cheated customers in ancient Egypt?",
+		  "answer": "Nose removal"
+		},
+		{
+		  "question": "AI: What deadly weapon was disguised as an umbrella in Cold War assassinations?",
+		  "answer": "Poisoned pellet"
+		},
+		{
+		  "question": "AI: What was the primary ingredient in Egyptian mummification fluid?",
+		  "answer": "Natron"
+		},
+		{
+		  "question": "AI: What strange treatment was recommended by doctors during the Black Death to prevent infection?",
+		  "answer": "Sitting in a sewer"
+		},
+		{
+		  "question": "AI: What food was forbidden for consumption by the Catholic Church during the 10th century?",
+		  "answer": "Horse meat"
+		},
+		{
+		  "question": "AI: What did Henry Ford use to construct a car prototype in the 1940s?",
+		  "answer": "Soybeans"
+		},
+		{
+		  "question": "AI: What dangerous insect did ancient Romans use to extract revenge on their enemies?",
+		  "answer": "Bees"
+		},
+		{
+		  "question": "AI: What strange material was used in the 19th century to treat burns and wounds?",
+		  "answer": "Spider webs"
+		},
+		{
+		  "question": "AI: What rare flower bulb was worth more than gold in the Netherlands during the 1600s?",
+		  "answer": "Tulip"
+		},
+		{
+		  "question": "AI: What bird was brought to France by Queen Marie Antoinette for exotic entertainment?",
+		  "answer": "Kangaroo"
+		},
+		{
+		  "question": "AI: What common household object did the Japanese consider an act of rebellion when it was used without permission during the 17th century?",
+		  "answer": "Umbrella"
+		},
+		{
+		  "question": "AI: What bizarre act of self-defense was used by South American tribes to protect their homes?",
+		  "answer": "Poison blow darts"
+		},
+		{
+		  "question": "AI: What ancient Roman god was once worshipped in the form of a black stone?",
+		  "answer": "Cybele"
+		},
+		{
+		  "question": "AI: What unusual clothing item did Roman soldiers wear to display wealth and status?",
+		  "answer": "Gold armor"
+		},
+		{
+		  "question": "AI: What strange method did ancient Chinese doctors use to determine the effectiveness of acupuncture?",
+		  "answer": "Colored smoke"
+		},
+		{
+		  "question": "AI: What unique tool was used by medieval knights to clean their armor?",
+		  "answer": "Sand"
+		},
+		{
+		  "question": "AI: What odd material did ancient Romans use to construct some of their public baths?",
+		  "answer": "Volcanic ash"
+		},
+		{
+		  "question": "AI: What was once used as a disinfectant during the plague that is still used in perfumes today?",
+		  "answer": "Rose water"
+		},
+		{
+		  "question": "AI: What curious object was used by the Vikings to navigate in cloudy weather?",
+		  "answer": "Sunstone"
+		},
+		{
+		  "question": "AI: What strange object did the ancient Egyptians place inside the tombs of the dead to guide them to the afterlife?",
+		  "answer": "Model boats"
+		},
+		{
+		  "question": "AI: What bizarre form of art was practiced by ancient Mayans to reshape the heads of infants?",
+		  "answer": "Skull deformation"
+		},
+		{
+		  "question": "AI: What curious item was used as an early form of toothpaste by the ancient Greeks?",
+		  "answer": "Crushed oyster shells"
+		},
+		{
+		  "question": "AI: What odd device did King Louis XIV of France have installed in his palace so he could speak with nobles while using it?",
+		  "answer": "Toilet"
+		},
+		{
+		  "question": "AI: What curious animal did ancient Egyptians revere so much that harming it was punishable by death?",
+		  "answer": "Cat"
+		},
+		{
+		  "question": "AI: What material did medieval alchemists believe could turn base metals into gold?",
+		  "answer": "Philosopher's stone"
+		},
+		{
+		  "question": "AI: What strange item did pirates use to prevent scurvy while at sea?",
+		  "answer": "Sauerkraut"
+		},
+		{
+		  "question": "AI: What curious object did early Arctic explorers eat to survive?",
+		  "answer": "Penguin eggs"
+		},
+		{
+		  "question": "AI: What ancient Persian queen invented a new method of communication using colored ribbons?",
+		  "answer": "Tomyris"
+		},
+		{
+		  "question": "AI: What did ancient Egyptians use as a rudimentary form of deodorant?",
+		  "answer": "Crocodile dung"
+		},
+		{
+		  "question": "AI: What strange body modification was practiced by the people of ancient Myanmar for spiritual reasons?",
+		  "answer": "Neck rings"
+		},
+		{
+		  "question": "AI: What unusual item was used by medieval monks to punish themselves for sins?",
+		  "answer": "Cilice"
+		},
+		{
+		  "question": "AI: What peculiar material was used in the 18th century to fill bed mattresses?",
+		  "answer": "Horsehair"
+		},
+		{
+		  "question": "AI: What bizarre method did ancient Greeks use to predict the future by interpreting the patterns of?",
+		  "answer": "Liver"
+		},
+		{
+		  "question": "AI: What curious animal did the Romans import in large numbers to use in the Colosseum for gladiatorial combat?",
+		  "answer": "Elephant"
+		},
+		{
+		  "question": "AI: What strange device did medieval knights use to increase their visibility during battle?",
+		  "answer": "Torch helmet"
+		},
+		{
+		  "question": "AI: What unusual vegetable was considered unfit for human consumption and only suitable for pigs in the 19th century?",
+		  "answer": "Potato"
+		},
+		{
+		  "question": "AI: What curious material did ancient Mesopotamians use to build their homes?",
+		  "answer": "Mud brick"
+		},
+		{
+		  "question": "AI: What odd food did Queen Victoria serve to impress foreign dignitaries at her royal banquets?",
+		  "answer": "Peacock"
+		},
+		{
+		  "question": "AI: What material did the Incas use to construct bridges that could withstand earthquakes?",
+		  "answer": "Grass rope"
+		},
+		{
+		  "question": "AI: What peculiar item was used as an early form of mail delivery in New Zealand?",
+		  "answer": "Pigeon"
+		},
+		{
+		  "question": "AI: What strange material did the Japanese samurai use to make their armor lightweight and flexible?",
+		  "answer": "Lacquered wood"
+		},
+		{
+		  "question": "AI: What curious method did Genghis Khan use to motivate his soldiers before battle?",
+		  "answer": "Animal blood"
+		}
     ]

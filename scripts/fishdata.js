@@ -353,7 +353,7 @@ const fishdata = [
         },
         {
             "answer": "John Lennon's tooth",
-            "question": "What piece of Beatles memorabilia did dentist Michael Zuk buy for ÂŁ19,500?"
+            "question": "What piece of Beatles memorabilia did dentist Michael Zuk buy for $31,000?"
         },
         {
             "answer": "Finger length",

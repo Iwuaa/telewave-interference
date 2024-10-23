@@ -557,7 +557,7 @@ const fishdata = [
         },
         {
             "answer": "A corpse",
-            "question": "In the US state of Texas, it is illegal to swear in from of what?"
+            "question": "In the US state of Texas, it is illegal to swear in front of what?"
         },
         {
             "answer": "Throw them on the roof",

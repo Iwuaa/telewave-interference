@@ -106,3 +106,9 @@ Here's a simple scoring guide:
   - Everyone else scores 2 points.
 
 **The first player to 5 points wins.**
+
+---
+Chameleon cards
+![chameleon coordinates](/icons/chameleon-coordinates.png)
+
+![chameleon card](/icons/chameleon-card.png)

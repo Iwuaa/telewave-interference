@@ -302,13 +302,13 @@ font-family: "Balsamiq Sans", sans-serif;
 font-weight: 700;
 font-style: italic;
 }
-tr td
+#chamTable tr td
 {
     background-color: #ffffffb9;
 	padding: 15px;
 }
-tr:nth-child(even) td:nth-child(odd), 
-tr:nth-child(odd) td:nth-child(even)
+#chamTable tr:nth-child(even) td:nth-child(odd), 
+#chamTable tr:nth-child(odd) td:nth-child(even)
 {
     background-color: #e3e2fba6;
 }

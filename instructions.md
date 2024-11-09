@@ -1,4 +1,4 @@
-# Telewave - Basic instructions
+# [Telewave](index.html)
 
 (The game is avaliable in [many languages](/telewave/lang/langs))
 
@@ -16,11 +16,11 @@
   * Percentages: Toggles the display of the percentages under the dial. (The official rulebook advises against using percentages to discuss the dial, yet I've found that they make playing via videocall much easier.)
   * There are two manual score boards at the bottom for keeping track of your points.
 
-# Telewave Interference
+# [Telewave Interference](interference.html)
 
 Telewave on steroids - guess on two axes at the same time!
 
-# Sounds Fishy
+# [Sounds Fishy](sounds_fishy.html)
 ### The aim of the game
 In Sounds Fishy, you’ll be trying to reel in the questioner with your lie; tempting them with a slippery red herring, or convincing them the true blue kipper is just bait.
 
@@ -64,7 +64,7 @@ If you want to fish for longer, go ahead!
 
 **Whoever has the most points at the end wins!**
 
-# Chameleon
+# [Chameleon](chameleon.html)
 
 ### AIM 
 To unmask the Chameleon without giving away the secret word. If you are the Chameleon then your mission is to blend in with the other players, avoid detection and work out the secret word. 

@@ -1,0 +1,137 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Rank Master</title>
+		<meta name="description" content="Telewave">
+		<meta name="author" content="Iwua">
+		<link rel="stylesheet" href="styles/styles.css?v=1.0">
+		<link rel="stylesheet" href="styles/rankmasterstyles.css">
+		<link rel="shortcut icon" type="image/png" href="icons/rankmaster.png">
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+			</style>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162367629-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-162367629-2');
+		</script>
+
+		<!-- <script>
+			if (localStorage.getItem("RMPlayers") === null){
+				localStorage.setItem("RMPlayers", "4");
+			}
+		</script> -->
+		
+
+	</head>
+
+	<body>
+
+		<div>
+			<h1 class="doto-bold">Rank Master</h1>
+
+			<div id='header'> 
+				<div>
+					<button id="new" onclick="newClue()">❓ New clue</button>
+					<!-- <button id="commit" onclick="button_guess()">🎯 Guess</button> -->
+					<!-- <button id="reveal" onclick="peekFishyAnswer()">👀 Peek</button> -->
+					<!-- <button id="reset" onclick="clearFishyAnswer()">🧹 Clear</button> -->
+				</div>
+
+				<div>
+					<a href="instructions#rank-master" target="_blank">Instructions</a>
+					<a href="lang/langs"><img src="lang/icons/translation.png" alt="Other languages" width=36px height=36px></a>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="RM-board">
+			<div class="RM-question doto-bold" id="RM-Q1" onclick="selectQuestion(1)">
+				<h2>sfdsfdsf</h2>
+
+			</div>
+
+						
+			<div class="RM-question doto-bold" id="RM-Q2" onclick="selectQuestion(2)">
+				<h2>dsfsdfsdfsdaf</h2>
+			</div>
+		</div>
+
+			
+		
+		<div id="scoreboard">
+			<div class="divTable scoreboard fish">
+				<div class="divTableBody">
+					<div class="divTableRow">
+						<div class="divTableCell playerCell">
+							<p id="player1Name" style="padding: 0; margin: 0;">Players</p>
+							<div>
+								<button class="stepButton" type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+									-
+								</button>
+
+								<input id="RM-Players" type="number" name="number" min="4" max="8" value="4">
+
+								<button class="stepButton" type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="RM-tokens" onclick="explosion()"> 
+
+		</div>
+
+		<div>
+			<div style="margin-top:20px">
+			<button class="button" onclick="resetScore()">Reset Score</button>
+			</div>
+			<!-- <div style="margin-top:20px" id="interference">
+				<a href="interference.html" class="button" style="font-weight:bold">🧠 Telewave Interference 🧠</a>
+			</div> -->
+		</div>
+
+		
+		
+		<div class="games">
+			<div style="margin-top:20px" id="interference">
+				<a href="index.html" class="button" style="font-weight:bold">🌊 Telewave 🌊</a>
+			</div>
+			<div style="margin-top:20px" class="inprogress">
+			<a href="interference.html" class="button" style="font-weight:bold">🧠 Telewave Interference 🧠</a>
+			</div> 
+			<div style="margin-top:20px" >
+				<a href="sounds_fishy.html" class="button" style="font-weight:bold">🐠 Sounds Fishy 🐡</a>
+			</div>
+			<div style="margin-top:20px" >
+				<a href="chameleon.html" class="button" style="font-weight:bold">🦎 Chameleon 🦎</a>
+			</div>
+			<!-- <div style="margin-top:20px" >
+				<a href="rank_master.html" class="button" style="font-weight:bold">📈 Rank Master 📉</a>
+			</div> -->
+		</div> 
+
+		<script src="scripts/rankmaster_scripts.js"></script>
+
+	</body>
+</html>

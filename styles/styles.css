@@ -218,8 +218,8 @@ div.scoreboard.fish {
 }
 
 /*Hidden Link till DONE*/
-#interference{
-	/*display:none*/
+.inprogress{
+	display:none
 }
 
 .games{
@@ -279,6 +279,31 @@ div.scoreboard.fish {
 	font-size: 1.3em;
 }
 
+#chamTable tr td
+{
+    background-color: #ffffffb9;
+	padding: 15px;
+}
+#chamTable tr:nth-child(even) td:nth-child(odd), 
+#chamTable tr:nth-child(odd) td:nth-child(even)
+{
+    background-color: #e3e2fba6;
+}
+
+/* Solid border divider */
+hr.solid {
+	border-top: 3px solid #eb1717;
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: inset;
+	border-width: 1px;
+}
+
+/* -------------- FONTS -------------- */
+
 .balsamiq-sans-regular {
 font-family: "Balsamiq Sans", sans-serif;
 font-weight: 400;
@@ -302,13 +327,4 @@ font-family: "Balsamiq Sans", sans-serif;
 font-weight: 700;
 font-style: italic;
 }
-#chamTable tr td
-{
-    background-color: #ffffffb9;
-	padding: 15px;
-}
-#chamTable tr:nth-child(even) td:nth-child(odd), 
-#chamTable tr:nth-child(odd) td:nth-child(even)
-{
-    background-color: #e3e2fba6;
-}
+

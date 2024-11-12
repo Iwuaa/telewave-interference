@@ -129,7 +129,7 @@ Chameleon cards
 
 ![chameleon card](/icons/chameleon-card.png)
 
-# Rank Master
+# Rank Master //TODO
 
 ### RULES FOR 4 TO 8 PLAYERS
 
@@ -153,9 +153,52 @@ A cooperative game: all the players are on the same team.
    - this player puts his Number card face up on the mat,
    - the same goes for each player’s card (including his own).
 
+
 > [!WARNING]
 > If a card is lower than the previous one: move a token from the unicorn zone to the poop zone. And the round continues.
 
 > [!IMPORTANT] 
 > • If at any time all the tokens are in the poop zone : the game is over!
 > • If any tokens are left in the unicorn zone at the end of the 5th round: you win!
+
+
+
+
+---
+
+:::note
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::tip
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::info
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::warning
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::danger
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+
+:::note[Your Title **with** some _Markdown_ `syntax`!]
+
+Some **content** with some _Markdown_ `syntax`.
+
+:::

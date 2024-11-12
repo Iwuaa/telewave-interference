@@ -86,7 +86,7 @@ function explosion() {
     img.setAttribute("onclick","reverseExplosion(this)");
 }
 
-//NOT WORKING for some reason - element is sent but attributes do not change
+//FIXME NOT WORKING for some reason - element is sent but attributes do not change
 function reverseExplosion(elem) {
     console.log("reverse explosion triggered");
     if (elem == undefined)
@@ -133,7 +133,7 @@ function newClue(){
 
 }
 
-function resetScore(){ //TODO
+function resetScore(){ 
     if (window.confirm("Are you sure you want to reset scoreboard?")) {
         const tokenContainer = document.getElementById("RM-tokens");
         tokenContainer.innerHTML = '';

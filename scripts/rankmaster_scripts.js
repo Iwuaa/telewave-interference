@@ -58,8 +58,9 @@ function setTokens() {
         console.log(diff);
 
         for (let index = 0; index < diff; index++) {
+            var rand = Math.floor(Math.random() * (4)) + 1;
             var elem = document.createElement("img");
-            elem.setAttribute("src", "img/cute3.png");
+            elem.setAttribute("src", "img/cute"+rand+".png");
             elem.setAttribute("height", "200");
             elem.setAttribute("alt", "token");
             elem.classList.add("token", "bunny");

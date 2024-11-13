@@ -84,7 +84,7 @@ function explosion() {
     img.setAttribute("src", "img/explosion.png");
     img.classList.add("exploded");
     img.classList.remove("bunny");
-    img.setAttribute("onclick","reverseExplosion(this)");
+    // img.setAttribute("onclick","reverseExplosion(this)");
 }
 
 //FIXME NOT WORKING for some reason - element is sent but attributes do not change

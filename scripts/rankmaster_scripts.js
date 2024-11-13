@@ -24,6 +24,7 @@ window.onload = function() {
     }
 
     setTokens();
+    newClue();
 }
 
 function selectQuestion(qNumber){
@@ -58,7 +59,7 @@ function setTokens() {
 
         for (let index = 0; index < diff; index++) {
             var elem = document.createElement("img");
-            elem.setAttribute("src", "img/bunny.png");
+            elem.setAttribute("src", "img/cute3.png");
             elem.setAttribute("height", "200");
             elem.setAttribute("alt", "token");
             elem.classList.add("token", "bunny");
@@ -94,7 +95,7 @@ function reverseExplosion(elem) {
     
     console.log(elem);
     
-    elem.setAttribute("src", "img/bunny.png");
+    elem.setAttribute("src", "img/cute3.png");
     elem.classList.remove("exploded");
     elem.classList.add("bunny");
     elem.removeAttribute("onclick");
@@ -107,30 +108,35 @@ function reverseExplosion(elem) {
 
 //TODO
 function newClue(){
-    var clue = fishdata[randomSeed()];
-    console.log(clue);
+    var questions = randomSeed();
+    var q1 = rankdata[questions[0]];
+    var q2 = rankdata[questions[1]];
+    console.log(q1, q2);
 
-    document.getElementById("fishQuestion").innerHTML = clue.question;   
-    document.getElementById("fishAnswer").innerHTML = clue.answer;
-    clearFishyAnswer();
+    var q1Containter = document.getElementById("RM-Q1");
+    q1Containter.classList.remove("selected");
+    q1Containter.classList.remove("unselected");
+    document.getElementById("RM-Q1-question").innerHTML = q1.question;   
+    document.getElementById("RM-Q1-from").innerHTML = q1.from;   
+    document.getElementById("RM-Q1-to").innerHTML = q1.to; 
 
-    var players = document.getElementsByClassName("playerCell");
-    //   console.log(players[0]);
-    //    console.log(players[3]);
-    //    console.log(players[4]);
-    
-    var randPlayerNumber = randomPlayers(players.length);
-  
-    console.log(randPlayerNumber + players.length)
-    
-    // var chosenPlayer = players[randPlayerNumber].getElementsByTagName('p').value;
-    console.log(randPlayerNumber + "   " + localStorage.getItem("player"+randPlayerNumber[0]+"Name"));
-    // console.log(secondPlayer + "   " + localStorage.getItem("player"+secondPlayer+"Name"));
-    // document.getElementById("fishPlayer").p.innerHTML = clue.answer;
-  
-    document.getElementById("fishPlayer1").innerHTML = localStorage.getItem("player"+randPlayerNumber[0]+"Name");
-    document.getElementById("fishPlayer2").innerHTML = "or " + localStorage.getItem("player"+randPlayerNumber[1]+"Name");
+    var q2Containter = document.getElementById("RM-Q2");
+    q2Containter.classList.remove("unselected");
+    q2Containter.classList.remove("selected");  
+    document.getElementById("RM-Q2-question").innerHTML = q2.question;   
+    document.getElementById("RM-Q2-from").innerHTML = q2.from;   
+    document.getElementById("RM-Q2-to").innerHTML = q2.to;   
+}
 
+function randomSeed(){
+    var q1 = Math.floor(Math.random() * (rankdata.length));
+    var q2 = q1;
+    while(q1 == q2){
+        q2 = Math.floor(Math.random() * (rankdata.length));
+    }
+
+    console.log("q1: " + q1 + "     q2: "+q2);
+    return [q1, q2];
 }
 
 function resetScore(){ 

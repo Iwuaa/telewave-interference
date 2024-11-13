@@ -1,3 +1,8 @@
+button:hover {
+	background: #ff9693;
+	cursor: pointer;
+}
+
 .RM-board{
 	border: 2px solid #000000;
 	padding: 1em;
@@ -15,14 +20,17 @@
 	width: 100%;
 	/* visibility: hidden; */
 }
-
+.divTableCell{
+	background-color: rgb(233, 233, 233);
+}
 .selected{
-	background-color: #fff292;
+	/* background-color: #fff292; */
     font-size: 1.5em;
 }
 
 .unselected{
     color: #7e7e7e;
+	display: none;
 }
 
 #RM-tokens{
@@ -32,11 +40,11 @@
     flex-wrap: wrap;
 }
 
-.bunny{
+/* .bunny{
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-}
+} */
 
 /* --------------- FONTS --------------- */
 
@@ -56,4 +64,34 @@
 	font-style: normal;
 	font-variation-settings:
 	  "ROND" 0;
+}
+
+.atma-light {
+	font-family: "Atma", system-ui;
+	font-weight: 300;
+	font-style: normal;
+}
+
+.atma-regular {
+font-family: "Atma", system-ui;
+font-weight: 400;
+font-style: normal;
+}
+
+.atma-medium {
+font-family: "Atma", system-ui;
+font-weight: 500;
+font-style: normal;
+}
+
+.atma-semibold {
+font-family: "Atma", system-ui;
+font-weight: 600;
+font-style: normal;
+}
+
+.atma-bold {
+font-family: "Atma", system-ui;
+font-weight: 700;
+font-style: normal;
 }

@@ -13,23 +13,8 @@
 
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
-			</style>
-
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162367629-2"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', 'UA-162367629-2');
-		</script>
-
-		<!-- <script>
-			if (localStorage.getItem("RMPlayers") === null){
-				localStorage.setItem("RMPlayers", "4");
-			}
-		</script> -->
+			@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap');
+		</style>
 		
 
 	</head>
@@ -37,7 +22,8 @@
 	<body>
 
 		<div>
-			<h1 class="doto-bold">Rank Master</h1>
+			<!-- <h1 class="doto-bold">Rank Master</h1> -->
+			<img src="img/cutecountdownlogo.png" alt="logo" style="height: 90px; margin: 10px;">
 
 			<div id='header'> 
 				<div>
@@ -56,14 +42,17 @@
 
 
 		<div class="RM-board">
-			<div class="RM-question doto-bold" id="RM-Q1" onclick="selectQuestion(1)">
-				<h2>sfdsfdsf</h2>
-
+			<div class="RM-question atma-semibold" id="RM-Q1" onclick="selectQuestion(1)">
+				<h2 id="RM-Q1-question">sfdsfdsf</h2>
+				<p class="RM-range">From: <span class="RM-from" id="RM-Q1-from">fkjdsakjb</span></p>
+				<p class="RM-range">To: <span class="RM-to" id="RM-Q1-to">sdagsdgsdgdfs</span></p>
 			</div>
 
 						
-			<div class="RM-question doto-bold" id="RM-Q2" onclick="selectQuestion(2)">
-				<h2>dsfsdfsdfsdaf</h2>
+			<div class="RM-question atma-semibold" id="RM-Q2" onclick="selectQuestion(2)">
+				<h2 id="RM-Q2-question">sfdsfdsf</h2>
+				<p class="RM-range">From: <span class="RM-from"id="RM-Q2-from">fkjdsakjb</span></p>
+				<p class="RM-range">To: <span class="RM-to"id="RM-Q2-to">sdagsdgsdgdfs</span></p>
 			</div>
 		</div>
 
@@ -87,12 +76,7 @@
 								</button>
 							</div>
 
-						</div>
-
-						
-
-						</div>
-
+						</div>		
 					</div>
 				</div>
 			</div>
@@ -131,6 +115,7 @@
 			</div> -->
 		</div> 
 
+		<script src="scripts/rankmaster_data.js"></script>
 		<script src="scripts/rankmaster_scripts.js"></script>
 
 	</body>

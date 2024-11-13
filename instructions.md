@@ -131,17 +131,18 @@ Chameleon cards
 
 ![chameleon card](/icons/chameleon-card.png)
 
-# Rank Master //TODO
+# Cute Countdown //TODO
+[PDF with cards](img/cutecountdown.pdf) to print
 
 ### RULES FOR 4 TO 8 PLAYERS
 
 A cooperative game: all the players are on the same team.
+A game consists of 5 rounds.
 
 **Setup:**
 
 - Set a number of players.
 - Randomly choose a Captain for the 1st round (the player to his left will be the Captain for the 2nd round, etc).
-- A game consists of 5 rounds.
 
 **A round:**
 

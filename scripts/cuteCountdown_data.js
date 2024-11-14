@@ -1,4 +1,4 @@
-const rankdata = [
+const CC_data = [
     {
         "question": "If you could have any animal as a pet, what would you choose?",
         "from": "least practical",

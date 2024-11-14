@@ -123,11 +123,11 @@ function reverseExplosion(elem) {
 /////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
 
-//TODO
+
 function newClue(){
     var questions = randomSeed();
-    var q1 = rankdata[questions[0]];
-    var q2 = rankdata[questions[1]];
+    var q1 = CC_data[questions[0]];
+    var q2 = CC_data[questions[1]];
     console.log(q1, q2);
 
     var q1Containter = document.getElementById("RM-Q1");
@@ -146,10 +146,10 @@ function newClue(){
 }
 
 function randomSeed(){
-    var q1 = Math.floor(Math.random() * (rankdata.length));
+    var q1 = Math.floor(Math.random() * (CC_data.length));
     var q2 = q1;
     while(q1 == q2){
-        q2 = Math.floor(Math.random() * (rankdata.length));
+        q2 = Math.floor(Math.random() * (CC_data.length));
     }
 
     console.log("q1: " + q1 + "     q2: "+q2);

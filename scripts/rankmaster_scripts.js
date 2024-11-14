@@ -34,6 +34,7 @@ function selectQuestion(qNumber){
     if (qNumber == 1) {
         q1.classList.add("selected");
         q1.classList.remove("unselected");
+        q1.setAttribute("onclick", "deselectQuestion()");
 
         q2.classList.add("unselected");
         q2.classList.remove("selected");
@@ -41,10 +42,25 @@ function selectQuestion(qNumber){
     } else {        
         q2.classList.add("selected");
         q2.classList.remove("unselected");
+        q2.setAttribute("onclick", "deselectQuestion()");
 
         q1.classList.add("unselected");
         q1.classList.remove("selected");
     }
+}
+
+function deselectQuestion(){
+    var q1 = document.getElementById("RM-Q1");
+    var q2 = document.getElementById("RM-Q2");
+
+    q1.classList.remove("selected");
+    q1.classList.remove("unselected");
+    q1.setAttribute("onclick", "selectQuestion()");
+
+    q2.classList.remove("unselected");
+    q2.classList.remove("selected");
+    q2.setAttribute("onclick", "selectQuestion()");
+
 }
 
 function setTokens() {

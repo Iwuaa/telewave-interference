@@ -39,7 +39,7 @@ function newClue(){
     console.log(clue);
 
     document.getElementById("sheepleQ").innerHTML = clue;   
-    resetBlackSheep();
+
 }
 
 function randomSeed(){

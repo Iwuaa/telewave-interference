@@ -131,7 +131,7 @@ Chameleon cards
 
 ![chameleon card](/icons/chameleon-card.png)
 
-# Cute Countdown 
+# [Cute Countdown](cute_countdown.html) 
 //TODO
 [PDF with cards](img/cutecountdown.pdf) to print
 

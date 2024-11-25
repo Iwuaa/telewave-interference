@@ -55,11 +55,11 @@ function deselectQuestion(){
 
     q1.classList.remove("selected");
     q1.classList.remove("unselected");
-    q1.setAttribute("onclick", "selectQuestion()");
+    q1.setAttribute("onclick", "selectQuestion(1)");
 
     q2.classList.remove("unselected");
     q2.classList.remove("selected");
-    q2.setAttribute("onclick", "selectQuestion()");
+    q2.setAttribute("onclick", "selectQuestion(2)");
 
 }
 

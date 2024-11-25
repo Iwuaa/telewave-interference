@@ -30,6 +30,11 @@ const CC_data = [
         "to": "most helpful"
     }, 
     {
+        "question": "You have a new dog. Wat do you name him?",
+        "from": "boring name",
+        "to": "a really scary name"
+    }, 
+    {
         "question": "You’re applying for an accountant job. What leisure activities do you list on your resume?",
         "from": "the one that will turn them off from hiring you",
         "to": "the one that will convince them to hire you"
@@ -563,5 +568,10 @@ const CC_data = [
         "question": "You can do one crime, but you will be caught and get exactly 1 year prison sentence, no matter what you did. What crime do you do?",
         "from": "least worth the jail time",
         "to": "most worth the jail time"
+    },
+    {
+        "question": "What tattoo would you choose for the captain?",
+        "from": "the one he would hate",
+        "to": "the one he would love"
     }
 ]

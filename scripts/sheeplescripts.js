@@ -34,6 +34,8 @@ window.onload = function() {
     newClue();
 }
 
+var audio = new Audio('img/beee.mp3');
+
 function newClue(){
     var clue = randomSeed();
     console.log(clue);
@@ -67,6 +69,7 @@ function setBlackSheep(id) {
         if (sh.id == id) {
             sh.classList.add("black");
             sh.classList.remove("white");
+            audio.play();
             
         } else {                
             sh.classList.add("white");

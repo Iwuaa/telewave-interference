@@ -11,6 +11,10 @@
 		<link rel="stylesheet" href="styles/sheeplestyles.css">
 		<link rel="shortcut icon" type="image/png" href="icons/sheeple_favicon.png">
 
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+		</style>
+
 	</head>
 
 	<body>
@@ -27,7 +31,7 @@
 					<input type="image" onclick="copySeedUrl()" src="img/clipboard-copy-512.png" alt="Copy link with seed" width=24px height=24px>
 				</div> -->
 				<div>
-					<button id="new" onclick="newClue()">❓ New question</button>
+					<button id="new" class="coiny-regular" onclick="newClue()">❓ New Question</button>
 					<!-- <button id="commit" onclick="button_guess()">🎯 Guess</button> -->
 					<!-- <button id="reveal" onclick="peekFishyAnswer()">👀 Peek</button>
 					<button id="reset" onclick="clearFishyAnswer()">🧹 Clear</button> -->
@@ -42,38 +46,25 @@
 				</div>
 			</div>
 		</div>
-		<!-- <script src="scripts/jquery-3.4.1.min.js"></script>
-		<script src="scripts/seedrandom.js"></script> -->
+		
 		<script src="scripts/sheepledata.js"></script>
 
-		<!-- <canvas id="wave" width="1000" height="150" style="border:5px solid #d3d3d3;">
-		</canvas>
-		<div class="slidecontainer">
-			<input type="range" min="0" max="1000" value="500" class="slider" id="guesser" oninput="guessdisp.value = Math.round(guesser.value/10)">
-			<output id="guessdisp">50</output>
-		</div> -->
 
-		<div id="fishyboard">
+		<div id="board">
 			<div>
-				<h2 id="sheepleQ"></h2>
+				<h2 id="sheepleQ" class="coiny-regular"></h2>
 			</div>
-			<!-- <div id="fishPeek">
-				<h2 id="fishAnswer"></h2>
-				<b id="fishPlayer1" style="font-weight: bold;"></b>				
-				<span id="fishPlayer2"></span>
-
-			</div> -->
 
 
 		</div>
-		<div id="board"></div>
+
 		<div id="score"></div>
 		<div id="scoreboard">
 			<div class="divTable scoreboard fish">
 				<div class="divTableBody">
 					<div class="divTableRow">
 						<div class="divTableCell playerCell">
-							<p id="player1Name" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<p id="player1Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
 							<div>
 								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
 									-
@@ -91,7 +82,7 @@
 						</div>
 
 						<div class="divTableCell playerCell">
-							<p id="player2Name" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<p id="player2Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
 							<div>
 								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
 									-
@@ -109,7 +100,7 @@
 						</div>
 
 						<div class="divTableCell playerCell">
-							<p id="player3Name" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<p id="player3Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
 							<div>
 								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
 									-
@@ -150,7 +141,7 @@
 		</div>
 		<div>
 			<div style="margin-top:20px" id="interference">
-			<button class="button" onclick="resetScore()">Reset Score</button>
+			<button class="button coiny-regular" onclick="resetScore()">Reset Score</button>
 			</div>
 		</div>
 

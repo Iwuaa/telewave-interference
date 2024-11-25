@@ -5,6 +5,10 @@ function setPlayersData() {
     setTokens();
 };
 
+
+var boom = new Audio('img/boom.mp3');
+boom.volume = 0.7;
+
 window.onload = function() {
     
     if (localStorage.getItem("RMPlayers") === null){
@@ -97,11 +101,14 @@ function setTokens() {
 }
 
 function explosion() {
-    var img = document.getElementsByClassName("bunny")[0];
+    var bunnies = document.getElementsByClassName("bunny");
+    var img = bunnies[0];
     img.setAttribute("src", "img/explosion.png");
     img.classList.add("exploded");
     img.classList.remove("bunny");
-    // img.setAttribute("onclick","reverseExplosion(this)");
+    if (bunnies.length == 0) {
+        boom.play();
+    }
 }
 
 //FIXME NOT WORKING for some reason - element is sent but attributes do not change

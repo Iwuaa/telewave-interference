@@ -1,0 +1,32 @@
+.sheep{
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    height: 50px;
+    width: 50px;
+    margin-top: 15px;
+    padding: 5px;
+    background-size: contain !important;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+}
+
+.white{
+    background-image: url("../icons/sheeple_white_icon.svg") !important; 
+}
+
+.white:hover{
+    border: 2px solid rgb(49, 49, 49);
+    cursor: pointer;
+    background: #f2f2f2;
+}
+
+.black{
+    background-image: url("../icons/sheeple_black_icon.svg") !important;
+    border: 2px solid black ;
+}
+
+.black:hover{
+    border: 2px solid rgb(255, 255, 255) ;
+    cursor: pointer;
+    background: #f2f2f2;
+}

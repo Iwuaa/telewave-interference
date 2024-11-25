@@ -4,12 +4,13 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Rank Master</title>
+		<title>Cute Countdown</title>
 		<meta name="description" content="Telewave">
 		<meta name="author" content="Iwua">
 		<link rel="stylesheet" href="styles/styles.css?v=1.0">
 		<link rel="stylesheet" href="styles/rankmasterstyles.css">
 		<link rel="shortcut icon" type="image/png" href="icons/rankmaster.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
@@ -42,16 +43,16 @@
 
 		<div class="RM-board">
 			<div class="RM-question atma-semibold" id="RM-Q1" onclick="selectQuestion(1)">
-				<h2 id="RM-Q1-question">sfdsfdsf</h2>
-				<p class="RM-range">From: <span class="RM-from" id="RM-Q1-from">fkjdsakjb</span></p>
-				<p class="RM-range">To: <span class="RM-to" id="RM-Q1-to">sdagsdgsdgdfs</span></p>
+				<h2 id="RM-Q1-question"></h2>
+				<p class="RM-range">From: <span class="RM-from" id="RM-Q1-from"></span></p>
+				<p class="RM-range">To: <span class="RM-to" id="RM-Q1-to"></span></p>
 			</div>
 
 						
 			<div class="RM-question atma-semibold" id="RM-Q2" onclick="selectQuestion(2)">
-				<h2 id="RM-Q2-question">sfdsfdsf</h2>
-				<p class="RM-range">From: <span class="RM-from"id="RM-Q2-from">fkjdsakjb</span></p>
-				<p class="RM-range">To: <span class="RM-to"id="RM-Q2-to">sdagsdgsdgdfs</span></p>
+				<h2 id="RM-Q2-question"></h2>
+				<p class="RM-range">From: <span class="RM-from"id="RM-Q2-from"></span></p>
+				<p class="RM-range">To: <span class="RM-to"id="RM-Q2-to"></span></p>
 			</div>
 		</div>
 
@@ -86,8 +87,9 @@
 		</div>
 
 		<div>
-			<div style="margin-top:20px">
+			<div style="margin-top:20px; display: flex">
 			<button class="button" onclick="resetScore()">Reset Score</button>
+			<button class="button" onclick="reverseExplosion()" style="margin-left: auto; margin-right: 0;"><i class="fa fa-undo" aria-hidden="true"></i> Undo</button>
 			</div>
 			<!-- <div style="margin-top:20px" id="interference">
 				<a href="interference.html" class="button" style="font-weight:bold">🧠 Telewave Interference 🧠</a>
@@ -120,8 +122,9 @@
 		<script src="scripts/cuteCountdown_data.js"></script>
 		<script src="scripts/cuteCountdown_scripts.js"></script>
 
-		//TODO
-		// form to add new questions to data
+		<!-- 
+		// TODO
+		// form to add new questions to data -->
 
 	</body>
 </html>

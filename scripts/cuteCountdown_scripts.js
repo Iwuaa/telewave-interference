@@ -105,17 +105,21 @@ function explosion() {
 }
 
 //FIXME NOT WORKING for some reason - element is sent but attributes do not change
-function reverseExplosion(elem) {
-    console.log("reverse explosion triggered");
-    if (elem == undefined)
-        elem = document.getElementsByClassName("exploded")[0];
-    
-    console.log(elem);
-    
-    elem.setAttribute("src", "img/cute3.png");
-    elem.classList.remove("exploded");
-    elem.classList.add("bunny");
-    elem.removeAttribute("onclick");
+function reverseExplosion() {
+    all = document.getElementsByClassName("exploded");
+    if (all.length !=0) {
+
+        console.log("reverse explosion triggered");
+        elem = all[all.length - 1];
+        console.log(elem);    
+        
+        var rand = Math.floor(Math.random() * (4)) + 1;
+        elem.setAttribute("src", "img/cute"+rand+".png");
+        elem.classList.remove("exploded");
+        elem.classList.add("bunny");
+        
+    }
+   
 }
 
 

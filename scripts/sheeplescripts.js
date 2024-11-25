@@ -60,10 +60,6 @@ function resetScore(){
 }
 
 function setBlackSheep(id) {
-    
-    var sheep = document.getElementsByClassName("sheep");
-
-    console.log(sheep);
 
     document.querySelectorAll('.sheep').forEach(function(sh) {
         console.log(sh.id);

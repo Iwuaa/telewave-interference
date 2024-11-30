@@ -1,3 +1,21 @@
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+header {
+min-height: 50px;
+background: lightcyan;
+}
+
+footer {
+min-height: 50px;
+background: PapayaWhip;
+}
+
 button:hover {
 	background: #8bdcda;
 	cursor: pointer;
@@ -13,6 +31,7 @@ button:hover {
 	height: 100vh;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	scroll-margin: 20px;
 }
 
 .RM-question{
@@ -22,9 +41,6 @@ button:hover {
     margin: 1em;
 	width: 100%;
 	/* visibility: hidden; */
-}
-.divTableCell{
-	background-color: rgb(233, 233, 233);
 }
 .selected{
 	/* background-color: #fff292; */
@@ -86,6 +102,25 @@ button:hover {
 	margin: 5px;
 }
 
+.disabled-btn{
+	color: #7e7e7e;
+	cursor: wait !important;
+	pointer-events: none;
+}
+
+#spinner{
+	height: 25px;
+}
+
+.playerName{
+	font-size: 1.3em;
+	letter-spacing: 2px;
+}
+
+.playerCell button:hover{
+	border: 2px solid #ffffff;
+}
+
 /* .bunny{
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -110,16 +145,6 @@ font-size: 1em;
 word-spacing: 10px;
 }
 
-
-.disabled-btn{
-	color: #7e7e7e;
-	cursor: wait !important;
-	pointer-events: none;
-}
-
-#spinner{
-	height: 25px;
-}
 	
 
 /* --------------- SPINNER --------------- */

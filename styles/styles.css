@@ -9,6 +9,7 @@ html, body {
 body {
 		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 		padding: 2rem;
+		padding-bottom: 0;
 		margin: 0;
 		font-size: 1.3rem;
 		color: #444444;
@@ -191,14 +192,26 @@ div.scoreboard {
 		font-size: 20px;
 		font-weight: bold;
 }
-.divTable.scoreboard .divTableCell:nth-child(4n+2) {
+.divTable.scoreboard .divTableCell:nth-child(8n+2) {
 		background: #a4d5ff;
 }
-.divTable.scoreboard .divTableCell:nth-child(4n+3) {
+.divTable.scoreboard .divTableCell:nth-child(8n+3) {
 		background: #ffc783;
 }
-.divTable.scoreboard .divTableCell:nth-child(4n+4) {
+.divTable.scoreboard .divTableCell:nth-child(8n+4) {
 		background: #adfb9a;
+}
+.divTable.scoreboard .divTableCell:nth-child(4n+1).second-row {
+		background: #fbb2ff;
+}
+.divTable.scoreboard .divTableCell:nth-child(4n+2).second-row {
+		background: #91fce6;
+}
+.divTable.scoreboard .divTableCell:nth-child(4n+3).second-row {
+		background: #f8ed8f;
+}
+.divTable.scoreboard .divTableCell:nth-child(4n+4).second-row {
+		background: #ba9afb;
 }
 div.scoreboard.fish {
 	width: 100%;
@@ -225,7 +238,6 @@ div.scoreboard.fish {
 .games{
     width: 100%;
 	margin-top: 100px;
-	margin-bottom: 50px;
     height: auto;
     display: flex;
     align-items: center;

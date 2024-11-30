@@ -7,6 +7,9 @@ const baseTextPrompt = "create short prompt for image generation for a mutant mo
     
 
 window.onload = function() {
+    
+    setPlayers();
+
     var monster = document.getElementById("monster");
     monster.onload = function () {
         console.log('img loaded');	
@@ -144,7 +147,7 @@ async function newMonster(model='?model=flux', nologo='&nologo=true', enhance='&
     const prompt = baseurl + monsterFeatures + imgStyle + model + nologo + enhance;
 
     var url = encodeURI(prompt);
-    console.log("IMAGE PROMPT \n" + prompt);
+    console.log("IMAGE PROMPT \n" + url);
     var img = document.getElementById("monster");
     img.setAttribute("src", url);
 }
@@ -186,30 +189,102 @@ async function postImgPrompt() {
     return result;
 }
 
-async function getImgPrompt() {
-    const site = "https://text.pollinations.ai/";
-    const prompt = "create short prompt for image generation for a monster - it should have bizarre random features, mainly classic monster features but in weird combinations, funny, eerie, describe its features not color";
-    const randomStr = Math.random().toString(36).slice(2, 7);
-    const url = encodeURI(site + prompt + "\n" + randomStr);
+// async function getImgPrompt() {
+//     const site = "https://text.pollinations.ai/";
+//     const prompt = "create short prompt for image generation for a monster - it should have bizarre random features, mainly classic monster features but in weird combinations, funny, eerie, describe its features not color";
+//     const randomStr = Math.random().toString(36).slice(2, 7);
+//     const url = encodeURI(site + prompt + "\n" + randomStr);
 
-    console.log(url);
-    try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`);
-      }
+//     console.log(url);
+//     try {
+//       const response = await fetch(url);
+//       if (!response.ok) {
+//         throw new Error(`Response status: ${response.status}`);
+//       }
   
-      var data = await response.text();
-      var answer = data.replace('"', '');
-      var answer = answer.replace("'", '');
-      console.log(answer);
-      return answer;
+//       var data = await response.text();
+//       var answer = data.replace('"', '');
+//       var answer = answer.replace("'", '');
+//       console.log(answer);
+//       return answer;
 
-    } catch (error) {
-      console.error(error.message);
+//     } catch (error) {
+//       console.error(error.message);
+//     }
+// }
+  
+
+function setPlayers(){
+    if (localStorage.getItem("player1Name") === null){
+        localStorage.setItem("player1Name", "Player 1");
     }
+    if (localStorage.getItem("player2Name") === null){
+        localStorage.setItem("player2Name", "Player 2");
+    }
+    if (localStorage.getItem("player3Name") === null){
+        localStorage.setItem("player3Name", "Player 3");
+    }
+    if (localStorage.getItem("player4Name") === null){
+        localStorage.setItem("player4Name", "Player 4");
+    }
+    if (localStorage.getItem("player5Name") === null){
+        localStorage.setItem("player5Name", "Player 5");
+    }
+    if (localStorage.getItem("player6Name") === null){
+        localStorage.setItem("player6Name", "Player 6");
+    }
+    if (localStorage.getItem("player7Name") === null){
+        localStorage.setItem("player7Name", "Player 7");
+    }
+    if (localStorage.getItem("player8Name") === null){
+        localStorage.setItem("player8Name", "Player 8");
+    }
+    
+    document.getElementById('player1Name').innerHTML = localStorage.getItem("player1Name");
+    document.getElementById('player2Name').innerHTML = localStorage.getItem("player2Name");	
+    document.getElementById('player3Name').innerHTML = localStorage.getItem("player3Name");	
+    document.getElementById('player4Name').innerHTML = localStorage.getItem("player4Name");	
+    document.getElementById('player5Name').innerHTML = localStorage.getItem("player5Name");
+    document.getElementById('player6Name').innerHTML = localStorage.getItem("player6Name");	
+    document.getElementById('player7Name').innerHTML = localStorage.getItem("player7Name");	
+    document.getElementById('player8Name').innerHTML = localStorage.getItem("player8Name");	
+    
+    document.getElementById("player1Name").addEventListener("input", function(el) {
+        localStorage.setItem("player1Name", document.getElementById('player1Name').innerHTML);
+    });
+    document.getElementById("player2Name").addEventListener("input", function(el) {
+        localStorage.setItem("player2Name", document.getElementById('player2Name').innerHTML);
+    });
+    document.getElementById("player3Name").addEventListener("input", function(el) {
+        localStorage.setItem("player3Name", document.getElementById('player3Name').innerHTML);
+    });
+    document.getElementById("player4Name").addEventListener("input", function(el) {
+        localStorage.setItem("player4Name", document.getElementById('player4Name').innerHTML);
+    });    
+    document.getElementById("player5Name").addEventListener("input", function(el) {
+        localStorage.setItem("player5Name", document.getElementById('player5Name').innerHTML);
+    });
+    document.getElementById("player6Name").addEventListener("input", function(el) {
+        localStorage.setItem("player6Name", document.getElementById('player6Name').innerHTML);
+    });
+    document.getElementById("player7Name").addEventListener("input", function(el) {
+        localStorage.setItem("player7Name", document.getElementById('player7Name').innerHTML);
+    });
+    document.getElementById("player8Name").addEventListener("input", function(el) {
+        localStorage.setItem("player8Name", document.getElementById('player8Name').innerHTML);
+    });
 }
-  
+
+function resetScore(){
+    var scores = document.getElementsByClassName("scoreInput");
+    if (window.confirm("Are you sure you want to reset scoreboard?")) {
+        for (let i = 0; i < scores.length; i++) {
+            scores[i].value = 0;
+        }
+
+        resetBlackSheep();        
+    }   
+}
 
 
 ////////////////////////////////////////////////////

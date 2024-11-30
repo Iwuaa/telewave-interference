@@ -61,33 +61,144 @@
 
 		</div>
 
-			
-		
 		<div id="scoreboard">
-			<div class="divTable scoreboard fish">
+			<div class="divTable scoreboard fish creepster-regular">
 				<div class="divTableBody">
 					<div class="divTableRow">
-						<div class="divTableCell playerCell">
-							<p id="player1Name" style="padding: 0; margin: 0;">Players</p>
+						<div class="divTableCell playerCell creepster-regular">
+							<p id="player1Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
 							<div>
-								<button class="stepButton" type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
 									-
 								</button>
 
-								<input id="RM-Players" type="number" name="number" min="4" max="8" value="4">
+								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
 
-								<button class="stepButton" type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
 									+
 								</button>
 							</div>
 
-						</div>		
+						</div>
+
+						<div class="divTableCell playerCell">
+							<p id="player2Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+									-
+								</button>
+
+								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell">
+							<p id="player3Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+									-
+								</button>
+
+								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell">
+							<p id="player4Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+									-
+								</button>
+
+								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+									+
+								</button>
+							</div>
+
+						</div>
+					</div>
+					<div class="divTableRow">
+						<div class="divTableCell playerCell second-row">
+							<p id="player5Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+									-
+								</button>
+
+								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell second-row">
+							<p id="player6Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+									-
+								</button>
+
+								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell second-row">
+							<p id="player7Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+									-
+								</button>
+
+								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell second-row">
+							<p id="player8Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+									-
+								</button>
+
+								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+									+
+								</button>
+							</div>
+
+						</div>
+
 					</div>
 				</div>
 			</div>
 		</div>
-
-		</div>
+		
 
 		<div>
 			<div style="margin-top:20px; display: flex">
@@ -98,7 +209,7 @@
 
 		
 		
-		<div class="games">
+		<div class="games footer">
 			<div style="margin-top:20px" id="interference">
 				<a href="index.html" class="button" style="font-weight:bold">🌊 Telewave 🌊</a>
 			</div>
@@ -118,13 +229,11 @@
 				<a href="cute_countdown.html" class="button" style="font-weight:bold">💥 Cute Countdown 💥</a>
 			</div>
 			<!-- <div style="margin-top:20px" >
-				<a href="cute_countdown.html" class="button" style="font-weight:bold">✏️ Sketchy Creatures 👾</a>
+				<a href="sketchy_creatures.html" class="button" style="font-weight:bold">✏️ Sketchy Creatures 👾</a>
 			</div> -->
 		</div> 
 
-		<script src="scripts/cuteCountdown_data.js"></script>
 		<script src="scripts/sketchycreatures_scripts.js"></script>
-
 
 	</body>
 </html>

@@ -1,0 +1,130 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Sketchy Creatures</title>
+		<meta name="description" content="Telewave">
+		<meta name="author" content="Iwua">
+		<link rel="stylesheet" href="styles/styles.css?v=1.0">
+		<link rel="stylesheet" href="styles/sketchycreatures.css">
+		<link rel="shortcut icon" type="image/png" href="icons/sketchy_creatures/sketchycreaturesfav2.svg">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Butcherman&family=Creepster&display=swap');
+		</style>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div>
+			<!-- <img src="img/sketchycreatureslogo.svg" alt="logo" class="logo"> -->
+			<img src="img/sketchycreatureslogo2.svg" alt="logo" class="logo">
+
+			<div id='header'> 
+				<div>
+					<button id="new" class="creepster-regular options main-option" onclick="newMonster()">1️⃣ 👾 New Creature <img src="img/spinner2.gif" alt="" id="spinner" style="display: none;"></button>
+					<button id="peek" class="creepster-regular options" onclick="peek()">2️⃣ 👀 Peek </button>
+					<button id="describe" class="creepster-regular options" onclick="describeTimer()">3️⃣ ⏱ Describe</button>
+					<button id="show" class="creepster-regular options" onclick="showMonster()">4️⃣ 🖼️ Show</button>
+				</div>
+
+				<div>
+					<a href="instructions#cute-countdown" target="_blank">Instructions</a>
+					<a href="lang/langs"><img src="lang/icons/translation.png" alt="Other languages" width=36px height=36px></a>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="monster-cont creepster-regular" id="monster-cont">
+
+			<div id="prompt"></div>
+			<div class="img-timer container" id="timer-container">
+				<div class="row">
+				  	<div class="col-md-12">
+						<div class="text-center otp-countdown">
+							<span>⏱</span>
+					  		<span class="otp-countdown"  id="timer-countdown">02:00</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<img id="monster" src="https://pollinations.ai/p/%22Design%20a%20bizarre%20monster%20with%20one%20oversized%20eye%2C%20a%20whiskered%20cat's%20face%2C%20bat%20wings%20that%20resemble%20paper%20planes%2C%20and%20spaghetti-like%20limbs%20twisted%20into%20knots%2C%20topped%20with%20a%20crown%20of%20glowing%20mushrooms.%22%0A%0AA%202D%20hand-drawn%20style%20with%20bold%2C%20clean%20outlines%20and%20vibrant%2C%20flat%20colors.%20The%20design%20is%20cartoonish%20and%20exaggerated%2C%20featuring%20quirky%20shapes%20and%20imaginative%20details.%20The%20texture%20mimics%20marker%20or%20ink%20drawings%2C%20with%20a%20slightly%20chaotic%20and%20whimsical%20vibe%20that%20combines%20humor%20and%20mild%20eeriness.%0AWhite%20background?width=596&height=1000&seed=210&enhance=true&nologo=true&model=flux" alt="AI-generated image">
+			</div>
+
+		</div>
+
+			
+		
+		<div id="scoreboard">
+			<div class="divTable scoreboard fish">
+				<div class="divTableBody">
+					<div class="divTableRow">
+						<div class="divTableCell playerCell">
+							<p id="player1Name" style="padding: 0; margin: 0;">Players</p>
+							<div>
+								<button class="stepButton" type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+									-
+								</button>
+
+								<input id="RM-Players" type="number" name="number" min="4" max="8" value="4">
+
+								<button class="stepButton" type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+									+
+								</button>
+							</div>
+
+						</div>		
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+
+		<div>
+			<div style="margin-top:20px; display: flex">
+			<button class="button creepster-regular" onclick="resetScore()">Reset Score</button>
+			<!-- <button class="button atma-medium" onclick="reverseExplosion()" style="margin-left: auto; margin-right: 0;"><i class="fa fa-undo" aria-hidden="true"></i> Undo</button> -->
+			</div>
+		</div>
+
+		
+		
+		<div class="games">
+			<div style="margin-top:20px" id="interference">
+				<a href="index.html" class="button" style="font-weight:bold">🌊 Telewave 🌊</a>
+			</div>
+			<div style="margin-top:20px" class="inprogress">
+			<a href="interference.html" class="button" style="font-weight:bold">🧠 Telewave Interference 🧠</a>
+			</div> 
+			<div style="margin-top:20px" >
+				<a href="sounds_fishy.html" class="button" style="font-weight:bold">🐠 Sounds Fishy 🐡</a>
+			</div>
+			<div style="margin-top:20px" >
+				<a href="sheeple.html" class="button" style="font-weight:bold">🐑 Sheeple 🐑</a>
+			</div>
+			<div style="margin-top:20px" >
+				<a href="chameleon.html" class="button" style="font-weight:bold">🦎 Chameleon 🦎</a>
+			</div>
+			<div style="margin-top:20px" >
+				<a href="cute_countdown.html" class="button" style="font-weight:bold">💥 Cute Countdown 💥</a>
+			</div>
+			<!-- <div style="margin-top:20px" >
+				<a href="cute_countdown.html" class="button" style="font-weight:bold">✏️ Sketchy Creatures 👾</a>
+			</div> -->
+		</div> 
+
+		<script src="scripts/cuteCountdown_data.js"></script>
+		<script src="scripts/sketchycreatures_scripts.js"></script>
+
+
+	</body>
+</html>

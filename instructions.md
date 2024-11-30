@@ -131,7 +131,8 @@ Chameleon cards
 
 ![chameleon card](/icons/chameleon-card.png)
 
-# [Cute Countdown](cute_countdown.html) 
+# [Cute Countdown](cute_countdown.html)
+
 //TODO
 [PDF with cards](img/cutecountdown.pdf) to print
 
@@ -160,7 +161,7 @@ A game consists of 5 rounds.
 > ❗❗
 > If a card is lower than the previous one: move a token from the unicorn zone to the poop zone. And the round continues.
 
-> ℹ 
+> ℹ
 > • If at any time all the tokens are in the poop zone : the game is over!
 > • If any tokens are left in the unicorn zone at the end of the 5th round: you win!
 
@@ -205,18 +206,21 @@ zone.
 Then a new round begins.
 
 # [Sheeple](sheeple.html)
-Can you blend into the crowd? 
-One player will read the question to the group. All other players must then attempt to answer the question in the way they expect all other players to answer. 
 
-If you blend, you earn a point. If you are the odd one out, then you may earn the dreaded **Black Sheep**, making it impossible to win the game while it is in your possession. Stay with the crowd, give simple answers, and the game could be yours. 
+Can you blend into the crowd?
+One player will read the question to the group. All other players must then attempt to answer the question in the way they expect all other players to answer.
+
+If you blend, you earn a point. If you are the odd one out, then you may earn the dreaded **Black Sheep**, making it impossible to win the game while it is in your possession. Stay with the crowd, give simple answers, and the game could be yours.
 
 ### SETUP
+
 The player who has last seen a live sheep is the **Leader of the Herd**. They will be in charge of reading the questions throughout the course of the game.
 
-Give everyone an answer pad and a pencil. The game is ready to begin! 
+Give everyone an answer pad and a pencil. The game is ready to begin!
 
 ### GAMEPLAY
-The **Leader of the Herd** will begin the game by reading a question prompted by the question card. All players will then write an answer on their answer sheet. The goal is to write the same answer as everyone else. Remember, keep that herd mentality. 
+
+The **Leader of the Herd** will begin the game by reading a question prompted by the question card. All players will then write an answer on their answer sheet. The goal is to write the same answer as everyone else. Remember, keep that herd mentality.
 
 After everyone has answered, go around the group and have each player read their answer aloud. If a player’s answer matches the majority, they earn one point. If there is a majority tie, then none of the players earn a point.
 
@@ -229,4 +233,65 @@ The only way to rid yourself of the **Black Sheep** is if another player is the 
 Continue to play the game until a player earns eight points.
 
 ### END OF GAME
+
 The game is over when a player collects **eight points**! This player is the winner.
+
+# [Sketchy Creatures](sketchy_creatures.html)
+
+### Setup
+
+**Players:** The game is best played with 3-8 players. Assign each player a number (it will be used in the voting phase).
+
+**Cards:** Shuffle the deck of monster cards and place them in a stack face down.
+
+**Drawing Materials:** Ensure each player has a drawing pad or paper and a pen or pencil.
+
+**Timer**: There's a build-in timer, so you just need to turn your volume up.
+
+### Gameplay
+
+#### Choose the Witness:
+
+Select a player to be the first "Witness" - it's the person who most recently watched a movie with an alien or monster in it. The Witness will be the one describing the monster for the round. The other players are called Artists - they will try to draw the monster that round.
+
+#### Viewing the Monster:
+
+First create 🖱️**New Monster** (this can take a few seconds to load).
+
+All Artists close their eyes and won't open them until they hear a gong.
+
+The Witness **🖱️Peeks** at a monster and has **20 seconds to memorize** the monster’s appearance. After the 20 seconds, the monster hides again.
+
+#### Describing the Monster:
+
+The Witness then has **2 minutes to 🖱️Describe** the monster to the Artists, who will draw based on the description.
+
+The Witness cannot use gestures or sounds and must rely solely on verbal descriptions.
+
+While the Witness describes the monster, Artists draw what they hear.
+
+Artists can ask the Witness questions, but the Witness cannot look at the monster during the description phase.
+
+#### Reveal and Vote:
+
+After 2 minutes, the Witness has to stop describing, and all Artists have to stop drawing. Artists will then reveal their drawings one by one.
+
+The Witness secretly votes for one Artist whose drawing he thinks is the most accurate (he will write the Artists numer on his drawing pad). Then the Witness **🖱️Shows** the monster to all players.
+
+Players vote on the drawing they think is the most accurate representation of the monster described by the Witness. On the count of three, each Artist will hold up number of fingers corresponding with the Artist of their choosing.
+
+#### Scoring:
+
+The player whose drawing receives the most votes gets a point. (In case of a tie, all Artists with the highest number of votes score a point.)
+
+If the Witness chose the same sketch that the artists ended up picking, the Witness scores one point.
+
+#### Rotate Roles:
+
+The role of the Witness rotates clockwise for the next round.
+
+Continue playing until each player has had a chance to be the Witness two times or a predetermined number of rounds is completed.
+
+### Winning the Game:
+
+The player with the most points at the end of the game wins.

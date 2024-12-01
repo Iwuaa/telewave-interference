@@ -4,6 +4,7 @@ alarm.volume = 0.7;
 var shortAlarm = new Audio("img/gong_short.mp3");
 shortAlarm.volume = 0.7;
 const baseTextPrompt = "create short prompt for image generation for a mutant monster - it should have a number of bizarre features of monsters, beasts, animals, plants or items, but in weird combinations, it can wear something or nothing, whimsical or grotesque, eerie, obscure, fun, describe its features not color, be precise and concise in the description, mo more that for main features";
+var maxPlayers = 8;
     
 
 window.onload = function() {
@@ -36,13 +37,6 @@ function monsterReady() {
     showBtn.classList.remove("disabled-btn");
 }
 
-function setPlayersData() {
-    var value = document.getElementById('RM-Players').value;
-    console.log(value);
-    localStorage.setItem("RMPlayers", value);
-    setTokens();
-    
-};
 
 async function peek() {
     var x = document.getElementById("monster-cont");
@@ -153,10 +147,6 @@ async function newMonster(model='?model=flux', nologo='&nologo=true', enhance='&
 }
 
 
-function randomSeed(){
-    return  Math.random() * 10000;
-}
-
 async function postImgPrompt() {
     const basePrompt = baseTextPrompt;
     //"create short prompt for image generation for a monster - it should have bizarre random features, mainly classic monster features but in weird combinations, funny, eerie, describe its features not color";
@@ -212,9 +202,24 @@ async function postImgPrompt() {
 //       console.error(error.message);
 //     }
 // }
-  
+
+function randomSeed(){
+    return  Math.random() * 10000;
+}
+
+function resetScore(){
+    var scores = document.getElementsByClassName("scoreInput");
+    if (window.confirm("Are you sure you want to reset scoreboard?")) {
+        for (let i = 0; i < scores.length; i++) {
+            scores[i].value = 0;            
+            updateScoreinStorage(i+1);
+        }  
+    }   
+}
 
 function setPlayers(){
+
+    // names
     if (localStorage.getItem("player1Name") === null){
         localStorage.setItem("player1Name", "Player 1");
     }
@@ -273,163 +278,63 @@ function setPlayers(){
     document.getElementById("player8Name").addEventListener("input", function(el) {
         localStorage.setItem("player8Name", document.getElementById('player8Name').innerHTML);
     });
+
+    // scores
+    if (localStorage.getItem("player1Score_SC") === null){
+        localStorage.setItem("player1Score_SC", 0);
+    }
+    if (localStorage.getItem("player2Score_SC") === null){
+        localStorage.setItem("player2Score_SC", 0);
+    }
+    if (localStorage.getItem("player3Score_SC") === null){
+        localStorage.setItem("player3Score_SC", 0);
+    }
+    if (localStorage.getItem("player4Score_SC") === null){
+        localStorage.setItem("player4Score_SC", 0);
+    }
+    if (localStorage.getItem("player5Score_SC") === null){
+        localStorage.setItem("player5Score_SC", 0);
+    }
+    if (localStorage.getItem("player6Score_SC") === null){
+        localStorage.setItem("player6Score_SC", 0);
+    }
+    if (localStorage.getItem("player7Score_SC") === null){
+        localStorage.setItem("player7Score_SC", 0);
+    }
+    if (localStorage.getItem("player8Score_SC") === null){
+        localStorage.setItem("player8Score_SC", 0);
+    }
+
+    document.getElementById('player1Score').value = localStorage.getItem("player1Score_SC");
+    document.getElementById('player2Score').value = localStorage.getItem("player2Score_SC");	
+    document.getElementById('player3Score').value = localStorage.getItem("player3Score_SC");	
+    document.getElementById('player4Score').value = localStorage.getItem("player4Score_SC");	
+    document.getElementById('player5Score').value = localStorage.getItem("player5Score_SC");
+    document.getElementById('player6Score').value = localStorage.getItem("player6Score_SC");	
+    document.getElementById('player7Score').value = localStorage.getItem("player7Score_SC");	
+    document.getElementById('player8Score').value = localStorage.getItem("player8Score_SC");	
+
+    for (let player = 1; player < maxPlayers+1; player++) {
+        
+        document.getElementById("player"+ player+"Score").addEventListener("input", function(el) {
+            updateScoreinStorage(player);   
+        });        
+    }
 }
 
-function resetScore(){
-    var scores = document.getElementsByClassName("scoreInput");
-    if (window.confirm("Are you sure you want to reset scoreboard?")) {
-        for (let i = 0; i < scores.length; i++) {
-            scores[i].value = 0;
-        }
-
-        resetBlackSheep();        
-    }   
+function updateScoreinStorage(playerNumber) {    
+    localStorage.setItem("player"+ playerNumber+"Score_SC", document.getElementById("player"+ playerNumber+"Score").value);
 }
 
-
-////////////////////////////////////////////////////
-
-
-// function selectQuestion(qNumber){
-//     var q1 = document.getElementById("RM-Q1");
-//     var q2 = document.getElementById("RM-Q2");
-
-//     if (qNumber == 1) {
-//         q1.classList.add("selected");
-//         q1.classList.remove("unselected");
-//         q1.setAttribute("onclick", "deselectQuestion()");
-
-//         q2.classList.add("unselected");
-//         q2.classList.remove("selected");
-
-//     } else {        
-//         q2.classList.add("selected");
-//         q2.classList.remove("unselected");
-//         q2.setAttribute("onclick", "deselectQuestion()");
-
-//         q1.classList.add("unselected");
-//         q1.classList.remove("selected");
-//     }
-// }
-
-// function deselectQuestion(){
-//     var q1 = document.getElementById("RM-Q1");
-//     var q2 = document.getElementById("RM-Q2");
-
-//     q1.classList.remove("selected");
-//     q1.classList.remove("unselected");
-//     q1.setAttribute("onclick", "selectQuestion(1)");
-
-//     q2.classList.remove("unselected");
-//     q2.classList.remove("selected");
-//     q2.setAttribute("onclick", "selectQuestion(2)");
-
-// }
-
-// function setTokens() {
-//     var players = localStorage.getItem("RMPlayers");
-//     console.log(players);
-
-//     var tokens = document.getElementsByClassName("token");
-
-//     if (players > tokens.length){
-//         const diff = players - tokens.length;
-//         console.log(diff);
-
-//         for (let index = 0; index < diff; index++) {
-//             var rand = Math.floor(Math.random() * (4)) + 1;
-//             var elem = document.createElement("img");
-//             elem.setAttribute("src", "img/cute"+rand+".png");
-//             elem.setAttribute("height", "200");
-//             elem.setAttribute("alt", "token");
-//             elem.classList.add("token", "bunny");
-//             document.getElementById("RM-tokens").appendChild(elem);
-//         }
-//     }
-
-//     else if (players<tokens.length){        
-//         const diff = tokens.length - players;
-//         console.log(diff);
-//         console.log(tokens);
-
-//         for (let index = 1; index <= diff; index++) {
-//             var lastToken = tokens[tokens.length-index];
-//             lastToken.remove();
-//         }
-//     }    
-// }
-
-// function explosion() {
-//     var bunnies = document.getElementsByClassName("bunny");
-//     var img = bunnies[0];
-//     img.setAttribute("src", "img/explosion.png");
-//     img.classList.add("exploded");
-//     img.classList.remove("bunny");
-//     if (bunnies.length == 0) {
-//         boom.play();
-//     }
-// }
-
-// //FIXME NOT WORKING for some reason - element is sent but attributes do not change
-// function reverseExplosion() {
-//     all = document.getElementsByClassName("exploded");
-//     if (all.length !=0) {
-
-//         console.log("reverse explosion triggered");
-//         elem = all[all.length - 1];
-//         console.log(elem);    
+function scoreButtonsClick(element, up, player) {
+    if (up == 'up') {
+        element.parentNode.querySelector('[type=number]').stepUp();
         
-//         var rand = Math.floor(Math.random() * (4)) + 1;
-//         elem.setAttribute("src", "img/cute"+rand+".png");
-//         elem.classList.remove("exploded");
-//         elem.classList.add("bunny");
-        
-//     }
-   
-// }
-
-
-// /////////////////////////////////////////////////////////////////////////
-// /////////////////////////////////////////////////////////////////////////
-// /////////////////////////////////////////////////////////////////////////
-
-
-// function newClue(){
-//     var questions = randomSeed();
-//     var q1 = CC_data[questions[0]];
-//     var q2 = CC_data[questions[1]];
-//     console.log(q1, q2);
-
-//     var q1Containter = document.getElementById("RM-Q1");
-//     q1Containter.classList.remove("selected");
-//     q1Containter.classList.remove("unselected");
-//     document.getElementById("RM-Q1-question").innerHTML = q1.question;   
-//     document.getElementById("RM-Q1-from").innerHTML = q1.from;   
-//     document.getElementById("RM-Q1-to").innerHTML = q1.to; 
-
-//     var q2Containter = document.getElementById("RM-Q2");
-//     q2Containter.classList.remove("unselected");
-//     q2Containter.classList.remove("selected");  
-//     document.getElementById("RM-Q2-question").innerHTML = q2.question;   
-//     document.getElementById("RM-Q2-from").innerHTML = q2.from;   
-//     document.getElementById("RM-Q2-to").innerHTML = q2.to;   
-// }
-
-// function randomSeed(){
-//     var q1 = Math.floor(Math.random() * (CC_data.length));
-//     var q2 = q1;
-//     while(q1 == q2){
-//         q2 = Math.floor(Math.random() * (CC_data.length));
-//     }
-
-//     console.log("q1: " + q1 + "     q2: "+q2);
-//     return [q1, q2];
-// }
-
-// function resetScore(){ 
-//     if (window.confirm("Are you sure you want to reset scoreboard?")) {
-//         const tokenContainer = document.getElementById("RM-tokens");
-//         tokenContainer.innerHTML = '';
-//         setTokens();
-//     }
-// }
+    } else {
+        element.parentNode.querySelector('[type=number]').stepDown();        
+    }
+    updateScoreinStorage(player);    
+} 
+//TODO - img history: element + save url to local storage
+//TODO - points save
+//TODO - timer fix??

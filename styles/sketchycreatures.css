@@ -65,7 +65,7 @@ button:hover {
 }
 
 .logo{
-	/* height: 150px;  */
+	height: 150px; 
 	margin: 10px; 
 	margin-bottom: 30px;
 	max-width: 100%;

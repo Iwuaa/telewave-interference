@@ -14,71 +14,28 @@
 			@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 		</style>
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162367629-2"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', 'UA-162367629-2');
-		</script>
-
-		<script>
-			if (localStorage.getItem("player1Name") === null){
-				localStorage.setItem("player1Name", "Player 1");
-			}
-			if (localStorage.getItem("player2Name") === null){
-				localStorage.setItem("player2Name", "Player 2");
-			}
-			if (localStorage.getItem("player3Name") === null){
-				localStorage.setItem("player3Name", "Player 3");
-			}
-			if (localStorage.getItem("player4Name") === null){
-				localStorage.setItem("player4Name", "Player 4");
-			}
-		</script>
-		
-
 	</head>
 
 	<body>
 
 		<div>
-			<h1>Chameleon</h1>
+			<!-- <h1>Chameleon</h1> -->
+
+			
+			
+			<img src="img/chameleon_logo.svg" alt="logo" class="logo">
+
 			<div id='header'> 
-				<!-- <div class="seed-container">
-					<span class="label">Seed</span>
-					<input type="image" onclick="update_seed()" src="img/refresh.png" alt="Update seed" width=24px height=24px>
-					<input type="text" id="seed" placeholder="seed" size="8" autofocus>
-					<input type="image" onclick="copySeedUrl()" src="img/clipboard-copy-512.png" alt="Copy link with seed" width=24px height=24px>
-				</div> -->
 				<div>
-					<button id="new" onclick="newTopic()">❓ New Topic</button>
-					<!-- <button id="commit" onclick="button_guess()">🎯 Guess</button> -->
-					<!-- <button id="reveal" onclick="newCoordinates()">🧭</button> -->
-					<!-- <button id="reset" onclick="clearFishyAnswer()">🧹 Clear</button> -->
+					<button id="new" onclick="newTopic()" class="balsamiq-sans-bold">❓ New Topic</button>
+					
 				</div>
-				<!-- <div class="percentages-container">
-						<span id="percentagesText" class="label">Percentage</span>
-						<input type="checkbox" id="percentages" checked onclick="update_percentages()">
-				</div> -->
 				<div>
 					<a href="instructions#chameleon" target="_blank">Instructions</a>
 					<a href="lang/langs"><img src="lang/icons/translation.png" alt="Other languages" width=36px height=36px></a>
 				</div>
 			</div>
 		</div>
-		<!-- <script src="scripts/jquery-3.4.1.min.js"></script>
-		<script src="scripts/seedrandom.js"></script>
-		<script src="scripts/fishdata.js"></script> -->
-
-		<!-- <canvas id="wave" width="1000" height="150" style="border:5px solid #d3d3d3;">
-		</canvas>
-		<div class="slidecontainer">
-			<input type="range" min="0" max="1000" value="500" class="slider" id="guesser" oninput="guessdisp.value = Math.round(guesser.value/10)">
-			<output id="guessdisp">50</output>
-		</div> -->
 
 		<div id="chamboard">
 			<div style="display: flex; width: 100%;">
@@ -89,10 +46,6 @@
 				</div>
 			</div>
 			<div id="chamgrid">
-				<!-- <h2 id="fishAnswer"></h2>
-				<b id="fishPlayer1" style="font-weight: bold;"></b>				
-				<span id="fishPlayer2"></span> -->
-
 				<table id="chamTable"><thead>
 					<tr>
 					  <th></th>
@@ -132,27 +85,23 @@
 					</tr>
 				  </tbody>
 				  </table>
-
 			</div>
-
-
 		</div>
-		<div id="board"></div>
-		<div id="score"></div>
+
 		<div id="scoreboard">
-			<div class="divTable scoreboard fish">
+			<div class="divTable scoreboard fish creepster-regular">
 				<div class="divTableBody">
 					<div class="divTableRow">
-						<div class="divTableCell playerCell">
-							<p id="player1Name" contenteditable="true" style="padding: 0; margin: 0;"></p>
+						<div class="divTableCell playerCell creepster-regular">
+							<p id="player1Name" class="playerName balsamiq-sans-bold" contenteditable="true" style="padding: 0; margin: 0;"></p>
 							<div>
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 1);">
 									-
 								</button>
 
-								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
+								<input class="scoreInput" id="player1Score" type="number" name="number" min="0" max="100" value="0">
 
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 1);">
 									+
 								</button>
 							</div>
@@ -160,15 +109,15 @@
 						</div>
 
 						<div class="divTableCell playerCell">
-							<p id="player2Name" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<p id="player2Name" class="playerName balsamiq-sans-bold" contenteditable="true" style="padding: 0; margin: 0;"></p>
 							<div>
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 2);">
 									-
 								</button>
 
-								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
+								<input class="scoreInput"  id="player2Score" type="number" name="number" min="0" max="100" value="0">
 
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 2);">
 									+
 								</button>
 							</div>
@@ -176,15 +125,15 @@
 						</div>
 
 						<div class="divTableCell playerCell">
-							<p id="player3Name" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<p id="player3Name" class="playerName balsamiq-sans-bold" contenteditable="true" style="padding: 0; margin: 0;"></p>
 							<div>
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 3);">
 									-
 								</button>
 
-								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
+								<input class="scoreInput"  id="player3Score" type="number" name="number" min="0" max="100" value="0">
 
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 3);">
 									+
 								</button>
 							</div>
@@ -192,15 +141,80 @@
 						</div>
 
 						<div class="divTableCell playerCell">
-							<p id="player4Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<p id="player4Name" class="playerName balsamiq-sans-bold" contenteditable="true" style="padding: 0; margin: 0;"></p>
 							<div>
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 4);">
 									-
 								</button>
 
-								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
+								<input class="scoreInput"  id="player4Score" type="number" name="number" min="0" max="100" value="0">
 
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 4);">
+									+
+								</button>
+							</div>
+
+						</div>
+					</div>
+					<div class="divTableRow">
+						<div class="divTableCell playerCell second-row">
+							<p id="player5Name" class="playerName balsamiq-sans-bold" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 5);">
+									-
+								</button>
+
+								<input class="scoreInput"  id="player5Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 5);">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell second-row">
+							<p id="player6Name" class="playerName balsamiq-sans-bold" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 6);">
+									-
+								</button>
+
+								<input class="scoreInput"  id="player6Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 6);">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell second-row">
+							<p id="player7Name" class="playerName balsamiq-sans-bold" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 7);">
+									-
+								</button>
+
+								<input class="scoreInput"  id="player7Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 7);">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell second-row">
+							<p id="player8Name" class="playerName balsamiq-sans-bold" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 8);">
+									-
+								</button>
+
+								<input class="scoreInput"  id="player8Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 8);">
 									+
 								</button>
 							</div>
@@ -211,13 +225,12 @@
 				</div>
 			</div>
 		</div>
+		
+
 		<div>
 			<div style="margin-top:20px" id="interference">
-			<button class="button" onclick="resetScore()">Reset Score</button>
+			<button class="button balsamiq-sans-bold" onclick="resetScore()">Reset Score</button>
 			</div>
-			<!-- <div style="margin-top:20px" id="interference">
-				<a href="interference.html" class="button" style="font-weight:bold">🧠 Telewave Interference 🧠</a>
-			</div> -->
 		</div>
 
 		<script>

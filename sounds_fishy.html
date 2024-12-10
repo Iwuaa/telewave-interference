@@ -8,52 +8,29 @@
 		<meta name="description" content="Telewave">
 		<meta name="author" content="Gus">
 		<link rel="stylesheet" href="styles/styles.css?v=1.0">
+		<link rel="stylesheet" href="styles/sounds_fishy.css">
 		<link rel="shortcut icon" type="image/png" href="icons/soundsfishyico.png">
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162367629-2"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', 'UA-162367629-2');
-		</script>
-
-		<script>
-			if (localStorage.getItem("player1Name") === null){
-				localStorage.setItem("player1Name", "Player 1");
-			}
-			if (localStorage.getItem("player2Name") === null){
-				localStorage.setItem("player2Name", "Player 2");
-			}
-			if (localStorage.getItem("player3Name") === null){
-				localStorage.setItem("player3Name", "Player 3");
-			}
-			if (localStorage.getItem("player4Name") === null){
-				localStorage.setItem("player4Name", "Player 4");
-			}
-		</script>
 		
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+		</style>	
 
 	</head>
 
 	<body>
 
 		<div>
-			<h1>Sounds Fishy</h1>
+			<!-- <h1>Sounds Fishy</h1> -->
+			
+			<img src="img/soundfishy_logo.svg" alt="logo" class="logo">
+
 			<div id='header'> 
-				<!-- <div class="seed-container">
-					<span class="label">Seed</span>
-					<input type="image" onclick="update_seed()" src="img/refresh.png" alt="Update seed" width=24px height=24px>
-					<input type="text" id="seed" placeholder="seed" size="8" autofocus>
-					<input type="image" onclick="copySeedUrl()" src="img/clipboard-copy-512.png" alt="Copy link with seed" width=24px height=24px>
-				</div> -->
 				<div>
-					<button id="new" onclick="newFishClue()">❓ New clue</button>
+					<button id="new" onclick="newFishClue()" class="doto-bold">❓ New clue</button>
 					<!-- <button id="commit" onclick="button_guess()">🎯 Guess</button> -->
-					<button id="reveal" onclick="peekFishyAnswer()">👀 Peek</button>
-					<button id="reset" onclick="clearFishyAnswer()">🧹 Clear</button>
+					<button id="reveal" onclick="peekFishyAnswer()" class="doto-bold">👀 Peek</button>
+					<button id="reset" onclick="clearFishyAnswer()" class="doto-bold">🧹 Clear</button>
 				</div>
 				<!-- <div class="percentages-container">
 						<span id="percentagesText" class="label">Percentage</span>
@@ -76,35 +53,35 @@
 			<output id="guessdisp">50</output>
 		</div> -->
 
-		<div id="fishyboard">
+		<div id="fishyboard" class="doto-boldQ">
 			<div>
 				<h2 id="fishQuestion"></h2>
 			</div>
 			<div id="fishPeek">
 				<h2 id="fishAnswer"></h2>
-				<b id="fishPlayer1" style="font-weight: bold;"></b>				
-				<span id="fishPlayer2"></span>
+				<b id="fishPlayer1" class="doto-boldQ"></b>				
+				<span id="fishPlayer2" style="color: rgb(56, 89, 125);"></span>
 
 			</div>
 
 
 		</div>
-		<div id="board"></div>
-		<div id="score"></div>
+		
+
 		<div id="scoreboard">
-			<div class="divTable scoreboard fish">
+			<div class="divTable scoreboard fish creepster-regular">
 				<div class="divTableBody">
 					<div class="divTableRow">
-						<div class="divTableCell playerCell">
-							<p id="player1Name" contenteditable="true" style="padding: 0; margin: 0;"></p>
+						<div class="divTableCell playerCell creepster-regular">
+							<p id="player1Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
 							<div>
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 1);">
 									-
 								</button>
 
-								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
+								<input class="scoreInput" id="player1Score" type="number" name="number" min="0" max="100" value="0">
 
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 1);">
 									+
 								</button>
 							</div>
@@ -112,15 +89,15 @@
 						</div>
 
 						<div class="divTableCell playerCell">
-							<p id="player2Name" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<p id="player2Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
 							<div>
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 2);">
 									-
 								</button>
 
-								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
+								<input class="scoreInput"  id="player2Score" type="number" name="number" min="0" max="100" value="0">
 
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 2);">
 									+
 								</button>
 							</div>
@@ -128,15 +105,15 @@
 						</div>
 
 						<div class="divTableCell playerCell">
-							<p id="player3Name" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<p id="player3Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
 							<div>
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 3);">
 									-
 								</button>
 
-								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
+								<input class="scoreInput"  id="player3Score" type="number" name="number" min="0" max="100" value="0">
 
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 3);">
 									+
 								</button>
 							</div>
@@ -146,13 +123,78 @@
 						<div class="divTableCell playerCell">
 							<p id="player4Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
 							<div>
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 4);">
 									-
 								</button>
 
-								<input class="scoreInput" type="number" name="number" min="0" max="100" value="0">
+								<input class="scoreInput"  id="player4Score" type="number" name="number" min="0" max="100" value="0">
 
-								<button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 4);">
+									+
+								</button>
+							</div>
+
+						</div>
+					</div>
+					<div class="divTableRow">
+						<div class="divTableCell playerCell second-row">
+							<p id="player5Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 5);">
+									-
+								</button>
+
+								<input class="scoreInput"  id="player5Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 5);">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell second-row">
+							<p id="player6Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 6);">
+									-
+								</button>
+
+								<input class="scoreInput"  id="player6Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 6);">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell second-row">
+							<p id="player7Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 7);">
+									-
+								</button>
+
+								<input class="scoreInput"  id="player7Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 7);">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell second-row">
+							<p id="player8Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 8);">
+									-
+								</button>
+
+								<input class="scoreInput"  id="player8Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 8);">
 									+
 								</button>
 							</div>
@@ -163,38 +205,15 @@
 				</div>
 			</div>
 		</div>
-		<div>
-			<div style="margin-top:20px" id="interference">
-			<button class="button" onclick="resetScore()">Reset Score</button>
+
+		<div style="margin-top:20px; display: flex; justify-content: space-between;">
+			<button class="button doto-bold" onclick="resetScore()">Reset Score</button>
+			<div style="display: block;">
+				<button class="button add" onclick="addPlayer()">➕🐟</button>
+				<button class="button remove" onclick="removePlayer()">➖🐟</button>
+				
 			</div>
-			<!-- <div style="margin-top:20px" id="interference">
-				<a href="interference.html" class="button" style="font-weight:bold">🧠 Telewave Interference 🧠</a>
-			</div> -->
 		</div>
-
-		<script>
-			document.getElementById("player1Name").addEventListener("input", function(el) {
-				localStorage.setItem("player1Name", document.getElementById('player1Name').innerHTML);
-			});
-			document.getElementById("player2Name").addEventListener("input", function(el) {
-				localStorage.setItem("player2Name", document.getElementById('player2Name').innerHTML);
-			});
-			document.getElementById("player3Name").addEventListener("input", function(el) {
-				localStorage.setItem("player3Name", document.getElementById('player3Name').innerHTML);
-			});
-			document.getElementById("player4Name").addEventListener("input", function(el) {
-				localStorage.setItem("player4Name", document.getElementById('player4Name').innerHTML);
-			});
-			
-			window.onload = function() {
-				document.getElementById('player1Name').innerHTML = localStorage.getItem("player1Name");
-				document.getElementById('player2Name').innerHTML = localStorage.getItem("player2Name");	
-				document.getElementById('player3Name').innerHTML = localStorage.getItem("player3Name");	
-				document.getElementById('player4Name').innerHTML = localStorage.getItem("player4Name");	
-				newFishClue();					
-			}
-		</script>
-
 		
 		<div class="games">
 			<div style="margin-top:20px" id="interference">

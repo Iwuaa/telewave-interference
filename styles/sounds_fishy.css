@@ -1,0 +1,63 @@
+body{
+    color: black;
+}
+.playerName{
+	font-family: "Doto", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 800;
+	font-style: normal;
+	font-variation-settings: "ROND" 0;
+    font-size: 1.3em;
+
+}
+
+
+.logo{
+	height: 100px; 
+	margin: 10px; 
+	margin-bottom: 30px;
+	max-width: 100%;
+	max-height: 300px;
+
+}
+
+.playerCell.hidden{
+    display: none;
+}
+
+    
+/* --------------- FONTS --------------- */
+
+.doto-semibold {
+	font-family: "Doto", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	font-variation-settings: "ROND" 0;
+}
+
+.doto-bold {
+	font-family: "Doto", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 800;
+	font-style: normal;
+	font-variation-settings: "ROND" 0;
+      font-size: 1.1em;
+}
+
+.doto-semiboldQ {
+	font-family: "Doto", sans-serif;
+	font-optical-sizing: auto;
+	font-weight:700;
+	font-style: normal;
+	font-variation-settings: "ROND" 0;
+}
+
+.doto-boldQ {
+	font-family: "Doto", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 900;
+	font-style: normal;
+	font-variation-settings: "ROND" 0;
+      font-size: 1.1em;
+}

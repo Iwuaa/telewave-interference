@@ -17,6 +17,16 @@ body {
 		flex-direction: column;
 }
 
+
+.logo{
+	height: 70px; 
+	margin: 10px; 
+	margin-bottom: 30px;
+	max-width: 100%;
+	max-height: 300px;
+
+}
+
 button, select, span.label {
 		outline: 0;
 		border: 0;
@@ -179,7 +189,7 @@ input::-webkit-inner-spin-button {
 }
 
 div.scoreboard {
-		background-color: #ffa2a2;
+		background-color: #ffffff;
 		width: 500px;
 		text-align: center;
 		border-collapse: collapse;
@@ -191,6 +201,9 @@ div.scoreboard {
 .divTable.scoreboard .divTableBody .divTableCell {
 		font-size: 20px;
 		font-weight: bold;
+}
+.divTable.scoreboard .divTableCell:nth-child(8n+1) {
+		background: #ffa2a2;
 }
 .divTable.scoreboard .divTableCell:nth-child(8n+2) {
 		background: #a4d5ff;

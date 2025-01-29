@@ -298,28 +298,19 @@ The player with the most points at the end of the game wins.
 
 # [Spurt](spurt.html)
 
-**AGES 10+ | 2+ PLAYERS**
+|**AGES 10+** | **2+ PLAYERS**|
 
 ## OBJECT
 
 Be the first to win 7 points.
 
-## SET UP
-
-1. Pull out a stack of 20-40 cards, depending on how long you want to play. This will be the Spurt deck for the game — put the remaining cards off to the side.
-2. Shuffle the deck, making sure all the cards face the same way, and set it in the middle of the playing area with the pink side face-up.
-
 ## HOW TO PLAY
-
-Flip over the top card, revealing its black side, and place it to the right of the deck. All players now simultaneously race to be the first to call out an answer that matches the criteria of the two cards. Whoever calls out a correct answer first collects the black card. Flip over the new top card to begin the next round.
-
-## RULES OF PLAY
-Think fast. Say it first!
-A city Ending in T
+Click on **🖱️New Clue**. A new theme and answer criteria shows up. All players now simultaneously race to be the first to call out an answer that matches the criteria of the two cards. Whoever calls out a correct answer first collects a oint. Click on **🖱️New Clue** to begin the next round.
 
 ### Notes:
 • If two or more players tie — or if all players agree there is no answer — turn the card back to its pink side and put it at the bottom of the deck.
+
 • If there is debate over whether an answer is valid, majority rules. A tie goes in favor of the player who gave the answer.
 
 ## ENDING THE GAME
-The game ends when there is only one Spurt card remaining. Whoever has collected the most cards wins the game. In the event of a tie, shuffle a handful of cards from the supply and play one last round with all of the tied players.
+The game ends when a player gets 7th point.

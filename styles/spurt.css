@@ -1,0 +1,46 @@
+.playerName{
+	font-family: "Galindo", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 800;
+	font-style: normal;
+	font-variation-settings: "ROND" 0;
+    font-size: 1.3em;
+
+}
+
+
+.playerCell.hidden{
+    display: none;
+}
+
+.sideButton{
+    margin: 0;
+    
+}
+
+#spurtCriteria{
+    background-color: #EC58A3;
+	padding: 5px;
+	width: 100%;
+    color: white;
+}
+
+#fishyboard{
+	border: 2px solid #000000;
+	padding: 1em;
+	margin-bottom: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;    
+    letter-spacing: 2px;
+}
+
+
+/* -----------------  FONTS  --------------------*/
+.galindo {
+    font-family: "Galindo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  

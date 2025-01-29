@@ -4,16 +4,14 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Sounds Fishy</title>
-		<meta name="description" content="Telewave">
-		<meta name="author" content="Gus">
-		<link rel="stylesheet" href="styles/styles.css?v=1.0">
-		<link rel="stylesheet" href="styles/sounds_fishy.css">
-		<link rel="shortcut icon" type="image/png" href="icons/soundsfishyico.png">
+		<title>Spurt</title>
+		<link rel="stylesheet" href="/styles/styles.css?v=1.0">
+		<link rel="stylesheet" href="/styles/spurt.css">
+		<link rel="shortcut icon" type="image/png" href="/icons/spurt.png">
 
 		
 		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Galindo&display=swap');
 		</style>	
 
 	</head>
@@ -21,30 +19,26 @@
 	<body>
 
 		<div>
-			<!-- <h1>Sounds Fishy</h1> -->
 			
-			<img src="img/soundfishy_logo.svg" alt="logo" class="logo">
+			<img src="/img/spurt_logo.svg" alt="logo" class="logo">
 
 			<div id='header'> 
 				<div>
-					<button id="new" onclick="newFishClue()" class="doto-bold">❓ New clue</button>
-					<!-- <button id="commit" onclick="button_guess()">🎯 Guess</button> -->
-					<button id="reveal" onclick="peekFishyAnswer()" class="doto-bold">👀 Peek</button>
-					<button id="reset" onclick="clearFishyAnswer()" class="doto-bold">🧹 Clear</button>
+					<button id="new" onclick="newThemeClue()" class="galindo">❓ Nová nápoveda</button>
+					<!-- <button id="reveal" onclick="peekFishyAnswer()" class="galindo sideButton">👀 Peek</button> -->
+					<!-- <button id="reset" onclick="clearFishyAnswer()" class="galindo">🧹 Clear</button> -->
 				</div>
 				<!-- <div class="percentages-container">
 						<span id="percentagesText" class="label">Percentage</span>
 						<input type="checkbox" id="percentages" checked onclick="update_percentages()">
 				</div> -->
 				<div>
-					<a href="instructions#sounds-fishy" target="_blank">Instructions</a>
-					<a href="lang/langs"><img src="lang/icons/translation.png" alt="Other languages" width=36px height=36px></a>
+					<a href="/instructions#spurt" target="_blank">Inštrukcie</a>
+					<a href="/spurt.html" ><img src="/icons/ENGflag.png" alt="Other languages" width=36px height=36px></a>
 				</div>
 			</div>
 		</div>
-		<script src="scripts/jquery-3.4.1.min.js"></script>
-		<script src="scripts/seedrandom.js"></script>
-		<script src="scripts/fishdata.js"></script>
+		<script src="/scripts/spurtdata.js"></script>
 
 		<!-- <canvas id="wave" width="1000" height="150" style="border:5px solid #d3d3d3;">
 		</canvas>
@@ -53,18 +47,13 @@
 			<output id="guessdisp">50</output>
 		</div> -->
 
-		<div id="fishyboard" class="doto-boldQ">
+		<div id="fishyboard" class="galindo">
 			<div>
 				<h2 id="fishQuestion"></h2>
 			</div>
-			<div id="fishPeek">
+			<div id="spurtCriteria">
 				<h2 id="fishAnswer"></h2>
-				<b id="fishPlayer1" class="doto-boldQ"></b>				
-				<span id="fishPlayer2" style="color: rgb(56, 89, 125);"></span>
-
 			</div>
-
-
 		</div>
 		
 
@@ -207,10 +196,10 @@
 		</div>
 
 		<div style="margin-top:20px; display: flex; justify-content: space-between;">
-			<button class="button doto-bold" onclick="resetScore()">Reset Score</button>
+			<button class="button galindo" onclick="resetScore()">Resetovať Skóre</button>
 			<div style="display: block;">
-				<button class="button add" onclick="addPlayer()">➕🐟</button>
-				<button class="button remove" onclick="removePlayer()">➖🐟</button>
+				<button class="button add" onclick="addPlayer()">➕👤</button>
+				<button class="button remove" onclick="removePlayer()">➖👤</button>
 				
 			</div>
 		</div>
@@ -222,9 +211,9 @@
 			<div style="margin-top:20px" class="inprogress">
 			<a href="interference.html" class="button" style="font-weight:bold">🧠 Telewave Interference 🧠</a>
 			</div> 
-			<!-- <div style="margin-top:20px" >
+			<div style="margin-top:20px" >
 				<a href="sounds_fishy.html" class="button" style="font-weight:bold">🐠 Sounds Fishy 🐡</a>
-			</div> -->
+			</div>
 			<div style="margin-top:20px" >
 				<a href="sheeple.html" class="button" style="font-weight:bold">🐑 Sheeple 🐑</a>
 			</div>
@@ -237,12 +226,12 @@
 			<div style="margin-top:20px" >
 				<a href="sketchy_creatures.html" class="button" style="font-weight:bold">✏️ Sketchy Creatures 👾</a>
 			</div>
-			<div style="margin-top:20px" >
+			<!-- <div style="margin-top:20px" >
 				<a href="spurt.html" class="button" style="font-weight:bold">👄 Spurt 👄</a>
-			</div>
+			</div> -->
 		</div> 
 
-		<script src="scripts/fishyscripts.js"></script>
+		<script src="/scripts/spurtscripts.js"></script>
 
 	</body>
 </html>

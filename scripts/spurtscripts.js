@@ -3,7 +3,7 @@ var data = {"theme":spurtdata_theme, "criteria":spurtdata_criteria};
 
 window.onload = function() {
     
-    if (window.location.href.indexOf("lang/SK") != -1){
+    if (window.location.href.indexOf("_SK") != -1){
         data.theme = spurtdata_theme_SK;
         data.criteria = spurtdata_criteria_SK;
         console.log(data);

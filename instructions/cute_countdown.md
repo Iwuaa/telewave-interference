@@ -1,6 +1,6 @@
 # [Cute Countdown](cute_countdown.html)
 
-[PDF with cards](img/cutecountdown.pdf) to print
+[PDF with cards](../img/cutecountdown.pdf) to print
 
 ### RULES FOR 4 TO 8 PLAYERS
 

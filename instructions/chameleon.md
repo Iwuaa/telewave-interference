@@ -50,9 +50,9 @@ Here's a simple scoring guide:
 
 ---
 
-[PDF with cards](img/chameleon-cards.pdf) to print
+[PDF with cards](../img/chameleon-cards.pdf) to print
 
 Chameleon cards
-![chameleon coordinates](/icons/chameleon-coordinates.png)
+![chameleon coordinates](../icons/chameleon-coordinates.png)
 
-![chameleon card](/icons/chameleon-card.png)
+![chameleon card](../icons/chameleon-card.png)

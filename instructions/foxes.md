@@ -51,3 +51,7 @@ Each players’ score will be recorded on the scoresheet. If less than six round
 
 ## End of Game
 The game ends after six rounds. The player that scores the most points wins the game. If there is a tie, the tied players share the victory.
+
+---
+
+[**Print and Play cards** (roles + voting cards)](../img/foxes.pdf)

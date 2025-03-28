@@ -1,0 +1,257 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Foxes</title>
+		<link rel="stylesheet" href="styles/styles.css?v=1.0">
+		<link rel="stylesheet" href="styles/foxes.css">
+		<link rel="shortcut icon" type="image/png" href="icons/fox_ico.png">
+
+		
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+		</style>	
+		
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div>
+			<!-- <h1>Sounds Fishy</h1> -->
+			
+			<img src="img/foxes_logo.svg" alt="logo" class="logo" style="height: 120px;">
+
+			<div id='header'> 
+				<div>
+					<button id="new" onclick="nextQuestion()" class="tektur">❓ Next question</button>
+					<button id="refresh" onclick="setQuestion()" >🔁</button>
+					<button id="peek" onclick="instructionFlow()" class="tektur">🦊 Peek </button>
+					<button id="show" onclick="showAnswerButton(this)" class="tektur">👀 Correct Answer</button>
+				</div>
+				<!-- <div class="percentages-container">
+						<span id="percentagesText" class="label">Percentage</span>
+						<input type="checkbox" id="percentages" checked onclick="update_percentages()">
+				</div> -->
+				<div>
+					<a href="instructions/foxes" target="_blank" class="tektur">Instructions</a>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="fishyboard" class="tektur-black">
+			<div class="img-timer container" id="timer-container" style="display: none;">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="text-center otp-countdown">
+							<span>⏱</span>
+							<span class="otp-countdown"  id="timer-countdown">02:00</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<h2 id="roundCounter" class="">1</h2>
+				<h2 id="foxQuestion" class="tektur">Question</h2>
+				<h2></h2>
+			</div>
+			<div id="foxAnswersBox" style="width: 100%">
+				<div id="foxAnswersBoxA" class="foxAnswersBox">
+					<span id="foxAnswerA" class="foxAnswer">A</span>
+					<span id="foxAnswerAtext" class="tektur">Answer A</span>
+				</div>
+				<div id="foxAnswersBoxB" class="foxAnswersBox">
+					<span id="foxAnswerB" class="foxAnswer" >B</span>
+					<span id="foxAnswerBtext" class="tektur">Answer B</span>
+				</div>
+				<div id="foxAnswersBoxC" class="foxAnswersBox">
+					<span id="foxAnswerC" class="foxAnswer">C</span>
+					<span id="foxAnswerCtext" class="tektur">Answer C</span>
+				</div>
+			</div>
+
+		</div>
+		
+
+		<div id="scoreboard">
+			<div class="divTable scoreboard fish creepster-regular">
+				<div class="divTableBody">
+					<div class="divTableRow">
+						<div class="divTableCell playerCell creepster-regular">
+							<p id="player1Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 1);">
+									-
+								</button>
+
+								<input class="scoreInput" id="player1Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 1);">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell">
+							<p id="player2Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 2);">
+									-
+								</button>
+
+								<input class="scoreInput"  id="player2Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 2);">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell">
+							<p id="player3Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 3);">
+									-
+								</button>
+
+								<input class="scoreInput"  id="player3Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 3);">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell">
+							<p id="player4Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 4);">
+									-
+								</button>
+
+								<input class="scoreInput"  id="player4Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 4);">
+									+
+								</button>
+							</div>
+
+						</div>
+					</div>
+					<div class="divTableRow">
+						<div class="divTableCell playerCell second-row">
+							<p id="player5Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 5);">
+									-
+								</button>
+
+								<input class="scoreInput"  id="player5Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 5);">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell second-row">
+							<p id="player6Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 6);">
+									-
+								</button>
+
+								<input class="scoreInput"  id="player6Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 6);">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell second-row">
+							<p id="player7Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 7);">
+									-
+								</button>
+
+								<input class="scoreInput"  id="player7Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 7);">
+									+
+								</button>
+							</div>
+
+						</div>
+
+						<div class="divTableCell playerCell second-row">
+							<p id="player8Name" class="playerName" contenteditable="true" style="padding: 0; margin: 0;"></p>
+							<div>
+								<button type="button" onclick="scoreButtonsClick(this, 'down', 8);">
+									-
+								</button>
+
+								<input class="scoreInput"  id="player8Score" type="number" name="number" min="0" max="100" value="0">
+
+								<button type="button" onclick="scoreButtonsClick(this, 'up', 8);">
+									+
+								</button>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="margin-top:20px; display: flex; justify-content: space-between;">
+			<button class="button doto-bold" onclick="resetScore()">Reset Score</button>
+			<div style="display: block;">
+				<button class="button add" onclick="addPlayer()">➕👤</button>
+				<button class="button remove" onclick="removePlayer()">➖👤</button>
+				
+			</div>
+		</div>
+		
+		<div class="games">
+			<div style="margin-top:20px" id="interference">
+				<a href="index.html" class="button" style="font-weight:bold">🌊 Telewave 🌊</a>
+			</div>
+			<div style="margin-top:20px" class="inprogress">
+			<a href="interference.html" class="button" style="font-weight:bold">🧠 Telewave Interference 🧠</a>
+			</div> 
+			<div style="margin-top:20px" >
+				<a href="sounds_fishy.html" class="button" style="font-weight:bold">🐠 Sounds Fishy 🐡</a>
+			</div>
+			<div style="margin-top:20px" >
+				<a href="sheeple.html" class="button" style="font-weight:bold">🐑 Sheeple 🐑</a>
+			</div>
+			<div style="margin-top:20px" >
+				<a href="chameleon.html" class="button" style="font-weight:bold">🦎 Chameleon 🦎</a>
+			</div>
+			<div style="margin-top:20px" >
+				<a href="cute_countdown.html" class="button" style="font-weight:bold">💥 Cute Countdown 💥</a>
+			</div>
+			<div style="margin-top:20px" >
+				<a href="sketchy_creatures.html" class="button" style="font-weight:bold">✏️ Sketchy Creatures 👾</a>
+			</div>
+			<div style="margin-top:20px" >
+				<a href="spurt.html" class="button" style="font-weight:bold">👄 Spurt 👄</a>
+			</div>
+		</div> 
+
+		<script src="scripts/foxesscripts.js"></script>
+
+	</body>
+</html>

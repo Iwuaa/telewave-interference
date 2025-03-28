@@ -1,9 +1,10 @@
-
 var alarm = new Audio("img/notification_gong.wav");
 alarm.volume = 0.7;
 var shortAlarm = new Audio("img/gong_short.mp3");
 shortAlarm.volume = 0.7;
+
 const baseTextPrompt = "create short prompt for image generation for a mutant monster - it should have a number of bizarre features of monsters, beasts, animals, plants or items, but in weird combinations, it can wear something or nothing, whimsical or grotesque, eerie, obscure, fun, describe its features not color, be precise and concise in the description, mo more that for main features";
+
 var maxPlayers = 8;
     
 
